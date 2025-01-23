@@ -9,10 +9,10 @@ Signed-off-by: Rob Woolley <rob.woolley@windriver.com>
  cmake/libphidget22-extras.cmake.in |    4 +--
  2 files changed, 3 insertions(+), 41 deletions(-)
 
-diff --git a/CMakeLists.txt b/CMakeLists.txt
-index d0640d51..706e59ae 100644
---- a/CMakeLists.txt
-+++ b/CMakeLists.txt
+Index: git/CMakeLists.txt
+===================================================================
+--- git.orig/CMakeLists.txt
++++ git/CMakeLists.txt
 @@ -3,43 +3,6 @@ project(libphidget22)
  
  find_package(ament_cmake REQUIRED)

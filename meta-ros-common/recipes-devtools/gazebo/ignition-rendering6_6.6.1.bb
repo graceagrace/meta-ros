@@ -10,6 +10,7 @@ SRCREV = "c2c5fdfb889f449a0c7665dc492ee6b67591cadd"
 
 S = "${WORKDIR}/git"
 
+# NOTE: unable to map the following CMake package dependencies: CUDA ignition-cmake2
 DEPENDS = "boost"
 
 inherit cmake pkgconfig

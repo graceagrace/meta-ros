@@ -136,10 +136,13 @@ ROS_WORLD_SKIP_GROUPS += "${@bb.utils.contains('DISTRO_FEATURES', 'x11', '', 'gl
 ROS_WORLD_SKIP_GROUPS += "webots-python-modules"
 
 # recipes depending on gazebo-rosdev
-ROS_WORLD_SKIP_GROUPS += "gazebo"
+# ROS_WORLD_SKIP_GROUPS += "gazebo"
 
 # recipes depending on libqglviewer (https://packages.debian.org/source/stretch/libqglviewer https://packages.debian.org/stretch/libqglviewer2-qt5)
 ROS_WORLD_SKIP_GROUPS += "libqglviewer"
+
+# recipes depending on ignition-* (ROS_UNRESOLVED_DEP-ignition-gazebo5, ROS_UNRESOLVED_DEP-ignition-math6, ROS_UNRESOLVED_DEP-ignition-msgs7, ROS_UNRESOLVED_DEP-ignition-transport10, ROS_UNRESOLVED_DEP-ignition-rendering5, ROS_UNRESOLVED_DEP-ignition-common4, ROS_UNRESOLVED_DEP-ignition-gui5)
+# ROS_WORLD_SKIP_GROUPS += "ignition"
 
 # recipes depending on legacy mongo-cxx-driver (https://packages.debian.org/source/stretch/mongo-cxx-driver-legacy)
 # the mongodb recipe in meta-oe installs just the binaries mongoc, mongos, install_compass
@@ -341,7 +344,6 @@ ROS_UNRESOLVED_DEP-ignition-gui6-native = "ignition-gui6-native"
 
 ROS_UNRESOLVED_DEP-libqt5-qml = "qtbase"
 ROS_UNRESOLVED_DEP-libqt5-quick = "qtbase"
-ROS_UNRESOLVED_DEP-qml-module-qtquick-extras = "qtquickcontrols2"
 
 ROS_UNRESOLVED_DEP-range-v3 = "range-v3"
 ROS_UNRESOLVED_DEP-simde = "simde"
@@ -418,20 +420,3 @@ ROS_UNRESOLVED_DEP-libwebsockets-dev = "libwebsockets"
 ROS_UNRESOLVED_DEP-libcurl-dev = "curl"
 ROS_UNRESOLVED_DEP-libzip-dev = "libzip"
 ROS_UNRESOLVED_DEP-ignition-math6 = "ignition-math6"
-
-ROS_UNRESOLVED_DEP-ros-ign = "ros-gz"
-ROS_UNRESOLVED_DEP-ros-ign-gazebo = "ros-gz-sim"
-ROS_UNRESOLVED_DEP-ros-ign-gazebo-demos = "ros-gz-sim-demos"
-ROS_UNRESOLVED_DEP-ros-ign-image = "ros-gz-image"
-ROS_UNRESOLVED_DEP-ros-ign-interfaces = "ros-gz-interfaces"
-ROS_UNRESOLVED_DEP-ros-ign-bridge = "ros-gz-bridge"
-
-ROS_UNRESOLVED_DEP-python3-deprecated = "python3-deprecated"
-ROS_UNRESOLVED_DEP-coinor-libipopt-dev = "ipopt"
-
-ROS_UNRESOLVED_DEP-python3-semver = "python3-semver"
-ROS_UNRESOLVED_DEP-libusb = "libusb-compat"
-ROS_UNRESOLVED_DEP-python3-typing-extensions = "python3-typing-extensions"
-ROS_UNRESOLVED_DEP-python3-flake8-deprecated = "python3-flake8-deprecated"
-ROS_UNRESOLVED_DEP-python3-flake8-blind-except = "python3-flake8-blind-except"
-ROS_UNRESOLVED_DEP-python3-flake8-class-newline = "python3-flake8-class-newline"

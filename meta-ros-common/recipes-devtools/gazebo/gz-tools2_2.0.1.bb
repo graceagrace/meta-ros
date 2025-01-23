@@ -4,6 +4,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=2a461be67a1edf991251f85f3aadd1d0"
 
 SRC_URI = " \
     git://github.com/gazebosim/gz-tools.git;protocol=https;branch=gz-tools2 \
+    file://backward-ros-include-dir.patch \
 "
 
 SRCREV = "efcc504bd3665151266f38db627c9095e5a5773f"
@@ -19,7 +20,7 @@ DEPENDS = " \
     jsoncpp \
     libyaml \
     libzip \
-    backward-cpp \
+    backward-ros \
     gz-cmake3 \
 "
 

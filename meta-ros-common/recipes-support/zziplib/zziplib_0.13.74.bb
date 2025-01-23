@@ -12,8 +12,12 @@ SRCREV = "df9e9c06634cb0c48bdc42efe9f7ac55847503a5"
 
 S = "${WORKDIR}/git"
 
+# NOTE: unable to map the following CMake package dependencies: UnixCommands
+# NOTE: unable to map the following pkg-config dependencies: sdl2 zzip
+#       (this is based on recipes that have previously been built and packaged)
 DEPENDS = "zlib libsdl2"
-
+# NOTE: spec file indicates the license may be "LGPLv2.1+"
 inherit cmake pkgconfig python3native
 
 EXTRA_OECMAKE = "-DZZIPTEST=OFF"
+

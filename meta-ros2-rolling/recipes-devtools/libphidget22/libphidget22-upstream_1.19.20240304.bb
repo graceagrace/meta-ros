@@ -1,7 +1,7 @@
 # Copyright (c) 2019-2021 LG Electronics, Inc.
 # Copyright (c) 2023 Wind River Systems, Inc.
 
-DESCRIPTION = "Drivers for various Phidgets devices"
+DESCRIPTION = "This package wraps the libphidget22 to use it as a ROS dependency"
 AUTHOR = "Martin Günther <martin.guenther@dfki.de>"
 HOMEPAGE = "https://www.phidgets.com/"
 SECTION = "devel"

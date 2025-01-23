@@ -16,7 +16,7 @@ Index: git/CMakeLists.txt
 @@ -14,82 +14,13 @@ if (POLICY CMP0135)
    cmake_policy(SET CMP0135 NEW)
  endif()
-
+ 
 -macro(build_yaml_cpp)
 -  set(extra_cmake_args)
 -
@@ -100,5 +100,5 @@ Index: git/CMakeLists.txt
 -  message(STATUS "Found yaml-cpp ${yaml-cpp_VERSION} in path ${yaml-cpp_CONFIG}")
 +  message(FATAL_ERROR "yaml-cpp not found -- missing from DEPENDS?")
  endif()
-
+ 
  ament_package(
