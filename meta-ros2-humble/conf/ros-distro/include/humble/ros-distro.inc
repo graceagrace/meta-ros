@@ -138,18 +138,8 @@ ROS_WORLD_SKIP_GROUPS += "${@bb.utils.contains('DISTRO_FEATURES', 'x11', '', 'gl
 # ERROR: Nothing RPROVIDES 'ROS_UNRESOLVED_DEP-python3-collada-pip' (but meta-ros2-rolling/generated-recipes/webots-ros2-desktop/webots-ros2-importer_0.0.3-1.bb RDEPENDS on or otherwise requires it)
 ROS_WORLD_SKIP_GROUPS += "webots-python-modules"
 
-# recipes depending on gazebo-rosdev
-ROS_WORLD_SKIP_GROUPS += "gazebo"
-
 # recipes depending on libqglviewer (https://packages.debian.org/source/stretch/libqglviewer https://packages.debian.org/stretch/libqglviewer2-qt5)
 ROS_WORLD_SKIP_GROUPS += "libqglviewer"
-
-# recipes depending on legacy mongo-cxx-driver (https://packages.debian.org/source/stretch/mongo-cxx-driver-legacy)
-# the mongodb recipe in meta-oe installs just the binaries mongoc, mongos, install_compass
-# the header files searched by mongo-store, warehouse-ros-mongo cmake files cmake/FindMongoClient.cmake and cmake/FindMongoDB.cmake
-# aren't even part of current version of mongo-cxx-driver
-# src/mongo/client/dbclient.h and src/mongo/client/dbclientinterface.h are only in the legacy branches
-ROS_WORLD_SKIP_GROUPS += "mongodb-legacy-cxx-driver"
 
 # recipes depending on ros1
 ROS_WORLD_SKIP_GROUPS += "${@bb.utils.contains('BBFILE_COLLECTIONS', 'ros1-layer', '', 'ros1', d)}"

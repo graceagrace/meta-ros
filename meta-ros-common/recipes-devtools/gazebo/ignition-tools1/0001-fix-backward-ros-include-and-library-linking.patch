@@ -1,0 +1,39 @@
+From 9a90abb0c4ea458d9fe02905e848ad6370f06956 Mon Sep 17 00:00:00 2001
+From: Amelia Grace <agrace@bastiansolutions.com>
+Date: Thu, 23 Jan 2025 11:52:00 -0700
+Subject: [PATCH] fix backward ros include and library linking
+
+Signed-off-by: Amelia Grace <agrace@bastiansolutions.com>
+---
+ CMakeLists.txt     | 4 +++-
+ src/CMakeLists.txt | 2 +-
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 07164a3..f0a8353 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -141,7 +141,9 @@ if (NOT USE_SYSTEM_BACKWARDCPP)
+   list(APPEND CMAKE_PREFIX_PATH ${PROJECT_SOURCE_DIR}/src/Backward)
+   set(STACK_DETAILS_AUTO_DETECT FALSE CACHE BOOL "Auto detect backward's stack details dependencies")
+ endif()
+-find_package(Backward)
++find_package(backward_ros REQUIRED PATHS "/opt/ros/humble/share/backward_ros/cmake")
++
++include_directories(${backward_ros_INCLUDE_DIRS})
+ 
+ message (STATUS "----------------------------------------\n")
+ 
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index 8bd7561..e109165 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -24,7 +24,7 @@ endif()
+ cmake_policy(PUSH)
+ cmake_policy(SET CMP0042 NEW)
+ add_library(backward SHARED backward.cc)
+-target_link_libraries(backward PUBLIC Backward::Backward)
++target_link_libraries(backward PUBLIC ${backward_ros_LIBRARIES})
+ set_target_properties(backward PROPERTIES OUTPUT_NAME ${PROJECT_NAME}-backward)
+ set_target_properties(backward PROPERTIES CXX_STANDARD 14)
+ cmake_policy(POP)

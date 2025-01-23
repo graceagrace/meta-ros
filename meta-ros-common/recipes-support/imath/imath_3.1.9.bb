@@ -15,7 +15,7 @@
 # licenses then you should change the value to separate the licenses with |
 # instead of &. If there is any doubt, check the accompanying documentation
 # to determine which situation is applicable.
-LICENSE = "BSD-3-Clause & Unknown"
+LICENSE = "BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE.md;md5=0f34c2a8b1c102d683feca7a5835e921"
 
 SRC_URI = "git://github.com/AcademySoftwareFoundation/Imath.git;protocol=https;branch=main"

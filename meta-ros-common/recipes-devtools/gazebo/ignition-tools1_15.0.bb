@@ -3,10 +3,10 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://COPYING;md5=2a461be67a1edf991251f85f3aadd1d0 \
                     file://LICENSE;md5=ba86179b62e9e2c25dd9184dd87e2464"
 
-SRC_URI = " \
-    git://github.com/gazebosim/gz-tools.git;protocol=https;branch=ign-tools1 \
-    file://backward-ros-include-dir.patch \
-"
+SRC_URI = "git://github.com/gazebosim/gz-tools.git;protocol=https;branch=ign-tools1 \
+           file://backward-ros-include-dir.patch \
+           file://0001-fix-backward-ros-include-and-library-linking.patch \
+           "
 
 SRCREV = "67d9d473aca6d33fb849e93e309cd678a75ccd71"
 
