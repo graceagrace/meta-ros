@@ -1,14 +1,14 @@
-From c2fc4cf4bf01092665aa4fe73b59e33b3a8752ed Mon Sep 17 00:00:00 2001
+From 48c5254670250ef5d60bfbcdc2033a9ce91d5eb8 Mon Sep 17 00:00:00 2001
 From: Amelia Grace <agrace@bastiansolutions.com>
-Date: Mon, 27 Jan 2025 15:04:30 -0700
-Subject: [PATCH] allow building RenderSystem_GL
+Date: Tue, 28 Jan 2025 09:23:42 -0700
+Subject: [PATCH] fix build with GL
 
 Signed-off-by: Amelia Grace <agrace@bastiansolutions.com>
 ---
  CMake/Dependencies.cmake                      | 204 +++++----------
  CMake/FeatureSummary.cmake                    | 247 ------------------
  CMakeLists.txt                                |   2 +-
- Components/Bites/CMakeLists.txt               |   2 +-
+ Components/Bites/CMakeLists.txt               |  21 +-
  OgreMain/include/OgreLodStrategy.h            |   0
  .../GL/include/OgreGLCopyingRenderTexture.h   |   0
  .../GL/include/OgreGLFBOMultiRenderTarget.h   |   0
@@ -19,11 +19,10 @@ Signed-off-by: Amelia Grace <agrace@bastiansolutions.com>
  .../GL/src/OgreGLFrameBufferObject.cpp        |   0
  .../GL/src/OgreGLPBRenderTexture.cpp          |   0
  RenderSystems/GLES2/CMakeLists.txt            |   8 +-
+ .../include/EGL/X11/OgreX11EGLSupport.h       |   2 +
  .../GLSupport/include/OgreGLPBuffer.h         |   0
  .../GLSupport/src/EGL/OgreEGLSupport.cpp      |   0
- .../src/EGL/X11/OgreX11EGLSupport.cpp         |   4 +-
- .../src/EGL/X11/OgreX11EGLWindow.cpp          |   4 +-
- 18 files changed, 75 insertions(+), 396 deletions(-)
+ 17 files changed, 88 insertions(+), 396 deletions(-)
  delete mode 100644 CMake/FeatureSummary.cmake
  mode change 100755 => 100644 OgreMain/include/OgreLodStrategy.h
  mode change 100755 => 100644 RenderSystems/GL/include/OgreGLCopyingRenderTexture.h
@@ -643,7 +642,7 @@ index dfada848c..d60803d3c 100644
 -include(FeatureSummary)
 +include(OgreFeatureSummary)
 diff --git a/Components/Bites/CMakeLists.txt b/Components/Bites/CMakeLists.txt
-index 704140e5c..01c0d8e02 100644
+index 704140e5c..97b1b9623 100644
 --- a/Components/Bites/CMakeLists.txt
 +++ b/Components/Bites/CMakeLists.txt
 @@ -22,7 +22,7 @@ endif()
@@ -655,6 +654,53 @@ index 704140e5c..01c0d8e02 100644
    mark_as_advanced(XAW_LIBRARY)
  endif ()
  
+@@ -37,6 +37,9 @@ if (OGRE_STATIC OR OGRE_BITES_STATIC_PLUGINS)
+   if (OGRE_BUILD_PLUGIN_CG)
+     set(DEPENDENCIES ${DEPENDENCIES} Plugin_CgProgramManager)
+   endif ()
++  if (OGRE_BUILD_PLUGIN_GLSLANG)
++    set(DEPENDENCIES ${DEPENDENCIES} Plugin_GLSLangProgramManager)
++  endif ()
+   if (OGRE_BUILD_PLUGIN_PFX)
+     set(DEPENDENCIES ${DEPENDENCIES} Plugin_ParticleFX)
+   endif ()
+@@ -75,6 +78,9 @@ if (OGRE_STATIC OR OGRE_BITES_STATIC_PLUGINS)
+   if (OGRE_BUILD_RENDERSYSTEM_TINY)
+     set(DEPENDENCIES ${DEPENDENCIES} RenderSystem_Tiny)
+   endif ()
++  if (OGRE_BUILD_RENDERSYSTEM_VULKAN)
++    set(DEPENDENCIES ${DEPENDENCIES} RenderSystem_Vulkan)
++  endif ()
+ endif ()
+ 
+ # define header and source files for the library
+@@ -169,11 +175,16 @@ generate_export_header(OgreBites
+     EXPORT_MACRO_NAME _OgreBitesExport
+     EXPORT_FILE_NAME ${PROJECT_BINARY_DIR}/include/OgreBitesPrerequisites.h)
+ 
+-if(Qt5_FOUND)
+-  qt5_wrap_cpp(MOC_SRC "${CMAKE_CURRENT_SOURCE_DIR}/include/OgreApplicationContextQt.h")
++if(Qt6_FOUND OR Qt5_FOUND)
++  if(Qt6_FOUND)
++    qt6_wrap_cpp(MOC_SRC "${CMAKE_CURRENT_SOURCE_DIR}/include/OgreApplicationContextQt.h")
++  else()
++    qt5_wrap_cpp(MOC_SRC "${CMAKE_CURRENT_SOURCE_DIR}/include/OgreApplicationContextQt.h")
++  endif()
++
+   add_library(OgreBitesQt ${OGRE_COMP_LIB_TYPE} ${MOC_SRC} "${CMAKE_CURRENT_SOURCE_DIR}/src/OgreApplicationContextQt.cpp")
+   set_target_properties(OgreBitesQt PROPERTIES VERSION ${OGRE_SOVERSION} SOVERSION ${OGRE_SOVERSION})
+-  target_link_libraries(OgreBitesQt PUBLIC Qt5::Gui OgreBites)
++  target_link_libraries(OgreBitesQt PUBLIC Qt${QT_VERSION_MAJOR}::Gui OgreBites)
+   ogre_config_component(OgreBitesQt)
+ endif()
+ 
+@@ -186,4 +197,4 @@ install(FILES ${HEADER_FILES}
+ )
+ install(FILES "${PROJECT_SOURCE_DIR}/Media/packs/SdkTrays.zip"
+   DESTINATION "${OGRE_MEDIA_PATH}/packs/"
+-)
++)
+\ No newline at end of file
 diff --git a/OgreMain/include/OgreLodStrategy.h b/OgreMain/include/OgreLodStrategy.h
 old mode 100755
 new mode 100644
@@ -703,42 +749,22 @@ index 96b0cf865..8eb64810b 100644
  
  file(GLOB HEADER_FILES "include/*.h")
  list(APPEND HEADER_FILES
+diff --git a/RenderSystems/GLSupport/include/EGL/X11/OgreX11EGLSupport.h b/RenderSystems/GLSupport/include/EGL/X11/OgreX11EGLSupport.h
+index 5540b8d59..825335ee0 100644
+--- a/RenderSystems/GLSupport/include/EGL/X11/OgreX11EGLSupport.h
++++ b/RenderSystems/GLSupport/include/EGL/X11/OgreX11EGLSupport.h
+@@ -30,6 +30,8 @@ THE SOFTWARE.
+ #ifndef __X11EGLSupport_H__
+ #define __X11EGLSupport_H__
+ 
++// Tell EGL that we are using X11 (to select the appropriate definitions)
++#define USE_X11
+ 
+ #include "OgreEGLSupport.h"
+ 
 diff --git a/RenderSystems/GLSupport/include/OgreGLPBuffer.h b/RenderSystems/GLSupport/include/OgreGLPBuffer.h
 old mode 100755
 new mode 100644
 diff --git a/RenderSystems/GLSupport/src/EGL/OgreEGLSupport.cpp b/RenderSystems/GLSupport/src/EGL/OgreEGLSupport.cpp
 old mode 100755
 new mode 100644
-diff --git a/RenderSystems/GLSupport/src/EGL/X11/OgreX11EGLSupport.cpp b/RenderSystems/GLSupport/src/EGL/X11/OgreX11EGLSupport.cpp
-index c8fe6e24e..90071d41a 100644
---- a/RenderSystems/GLSupport/src/EGL/X11/OgreX11EGLSupport.cpp
-+++ b/RenderSystems/GLSupport/src/EGL/X11/OgreX11EGLSupport.cpp
-@@ -64,11 +64,11 @@ namespace Ogre {
-             mOriginalMode = mCurrentMode;
-             mVideoModes.push_back(mCurrentMode);
-         }
--        else if (XQueryExtension(mNativeDisplay, "RANDR", &dummy, &dummy, &dummy))
-+        else if (XQueryExtension(static_cast<Display*>(mNativeDisplay), "RANDR", &dummy, &dummy, &dummy))
-         {
-             XRRScreenConfiguration *screenConfig;
- 
--            screenConfig = XRRGetScreenInfo(mNativeDisplay, DefaultRootWindow(mNativeDisplay));
-+            screenConfig = XRRGetScreenInfo(static_cast<Display*>(mNativeDisplay), DefaultRootWindow(static_cast<Display*>(mNativeDisplay)));
- 
-             if (screenConfig)
-             {
-diff --git a/RenderSystems/GLSupport/src/EGL/X11/OgreX11EGLWindow.cpp b/RenderSystems/GLSupport/src/EGL/X11/OgreX11EGLWindow.cpp
-index adf394225..b0350b64a 100644
---- a/RenderSystems/GLSupport/src/EGL/X11/OgreX11EGLWindow.cpp
-+++ b/RenderSystems/GLSupport/src/EGL/X11/OgreX11EGLWindow.cpp
-@@ -333,8 +333,8 @@ namespace Ogre {
-         {
-             if (!mIsTopLevel)
-             {
--                XResizeWindow(mGLSupport->getNativeDisplay(), mWindow, width, height);
--                XFlush(mGLSupport->getNativeDisplay());
-+                XResizeWindow(static_cast<Display*>(mGLSupport->getNativeDisplay()), mWindow, width, height);
-+                XFlush(static_cast<Display*>(mGLSupport->getNativeDisplay()));
-             }
- 
-             mWidth = width;

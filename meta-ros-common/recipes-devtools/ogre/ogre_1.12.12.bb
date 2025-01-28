@@ -14,9 +14,10 @@ SRCREV_imgui = "e5cb04b132cba94f902beb6186cb58b864777012"
 SRCREV_FORMAT = "ogre_imgui"
 
 SRC_URI = "git://github.com/OGRECave/ogre;protocol=https;name=ogre;branch=master \
-    git://github.com/ocornut/imgui.git;protocol=https;name=imgui;subdir=imgui;branch=master \
-    file://0001-CMakeLists.txt-don-t-set-RPATH.patch \
-"
+           git://github.com/ocornut/imgui.git;protocol=https;name=imgui;subdir=imgui;branch=master \
+           file://0001-CMakeLists.txt-don-t-set-RPATH.patch \
+           file://0001-fix-build-with-GL.patch \
+           "
 
 S = "${WORKDIR}/git"
 
