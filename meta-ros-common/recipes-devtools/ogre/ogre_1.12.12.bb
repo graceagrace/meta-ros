@@ -17,6 +17,7 @@ SRC_URI = "git://github.com/OGRECave/ogre;protocol=https;name=ogre;branch=master
            git://github.com/ocornut/imgui.git;protocol=https;name=imgui;subdir=imgui;branch=master \
            file://0001-CMakeLists.txt-don-t-set-RPATH.patch \
            file://0001-fix-build-with-GL.patch \
+           file://0001-add-OgreFeatureSummary-file-correctly.patch \
            "
 
 S = "${WORKDIR}/git"
