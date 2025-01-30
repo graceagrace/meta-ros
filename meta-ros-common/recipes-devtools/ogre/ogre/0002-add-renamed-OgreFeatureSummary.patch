@@ -1,9 +1,8 @@
-From 239f7ace922628b88c827d9b7680205e0cb0df84 Mon Sep 17 00:00:00 2001
+From ed77d7d75435fa643997ee98b35d83d48cb495be Mon Sep 17 00:00:00 2001
 From: Amelia Grace <agrace@bastiansolutions.com>
-Date: Tue, 28 Jan 2025 09:57:14 -0700
-Subject: [PATCH] add OgreFeatureSummary file correctly
+Date: Thu, 30 Jan 2025 09:13:25 -0700
+Subject: [PATCH] add renamed OgreFeatureSummary
 
-Signed-off-by: Amelia Grace <agrace@bastiansolutions.com>
 ---
  CMake/OgreFeatureSummary.cmake | 250 +++++++++++++++++++++++++++++++++
  1 file changed, 250 insertions(+)

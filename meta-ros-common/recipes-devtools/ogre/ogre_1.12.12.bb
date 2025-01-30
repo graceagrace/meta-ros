@@ -16,8 +16,8 @@ SRCREV_FORMAT = "ogre_imgui"
 SRC_URI = "git://github.com/OGRECave/ogre;protocol=https;name=ogre;branch=master \
            git://github.com/ocornut/imgui.git;protocol=https;name=imgui;subdir=imgui;branch=master \
            file://0001-CMakeLists.txt-don-t-set-RPATH.patch \
-           file://0001-fix-build-with-GL.patch \
-           file://0001-add-OgreFeatureSummary-file-correctly.patch \
+           file://0001-resolve-naming-collision-and-fix-build-with-x11.patch \
+           file://0002-add-renamed-OgreFeatureSummary.patch \
            "
 
 S = "${WORKDIR}/git"
@@ -64,8 +64,10 @@ EXTRA_OECMAKE_RVIZ_OGRE_VENDOR = " \
     -DOGRE_BUILD_RENDERSYSTEM_GLES2:BOOL=TRUE \
     -DOGRE_GLSUPPORT_USE_EGL=ON \
     -DOGRE_BUILD_RENDERSYSTEM_VULKAN=ON \
+    -DOGRE_BUILD_RENDERSYSTEM_GL=ON \
     -DOGRE_BUILD_PLUGIN_GLSLANG=ON \
     -DIMGUI_DIR=${WORKDIR}/imgui \
+    -DOGRE_CONFIG_ENABLE_ZIP:BOOL=ON \
 "
 
 EXTRA_OECMAKE += "${EXTRA_OECMAKE_RVIZ_OGRE_VENDOR}"
