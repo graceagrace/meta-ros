@@ -74,6 +74,8 @@ DEPENDS += " \
     tbb \
 "
 
+CXXFLAGS += "-Wno-deprecated-declarations"
+
 FILES:${PN} += " \
     ${datadir}/gazebo-11 \
     ${datadir}/gazebo \
