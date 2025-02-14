@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 diff --git a/CMakeLists.txt b/CMakeLists.txt
 index 1ca5fc1..9641111 100644
 --- a/CMakeLists.txt
@@ -9,3 +10,20 @@ index 1ca5fc1..9641111 100644
 +    -DPROTOBUF_PROTOC_EXECUTABLE=${PROTOBUF_PROTOC_EXECUTABLE}
    GLOBAL_HOOK
  )
+=======
+Upstream-Status: Inappropriate [OE specific]
+
+Index: git/CMakeLists.txt
+===================================================================
+--- git.orig/CMakeLists.txt
++++ git/CMakeLists.txt
+@@ -43,6 +43,8 @@ ament_vendor(${LIB_NAME_UNDERSCORE}_vend
+   SATISFIED ${${LIB_NAME_FULL}_FOUND}
+   VCS_URL https://github.com/gazebosim/${GITHUB_NAME}.git
+   VCS_VERSION ${GITHUB_NAME}${LIB_VER_MAJOR}_${LIB_VER}${LIB_VER_SUFFIX}
++  CMAKE_ARGS
++    -DPROTOBUF_PROTOC_EXECUTABLE=${PROTOBUF_PROTOC_EXECUTABLE}
+   GLOBAL_HOOK
+ )
+ 
+>>>>>>> origin/master-next

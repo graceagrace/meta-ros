@@ -1,21 +1,17 @@
-# Copyright (c) 2023 Wind River Systems, Inc.
+# Copyright (c) 2025 Wind River Systems, Inc.
 
-inherit python3native
+inherit python3targetconfig
 
-ROS_BUILDTOOL_DEPENDS = " \
-    ament-copyright-native \
-    ament-lint-cmake-native \
-    ament-package-native \
-    ament-xmllint-native \
-"
-
-ROS_BUILD_DEPENDS = " \
+ROS_BUILDTOOL_DEPENDS += " \
     ament-cmake-lint-cmake \
     ament-cmake-copyright \
-    ament-cmake-core \
-    ament-cmake-test \
     ament-cmake-xmllint \
+    ament-copyright \
+    ament-lint-cmake \
+    ament-package \
+    ament-xmllint \
+    ignition-cmake2 \
 "
 
-# Remove ignition-cmake2 which is not needed at runtime
-ROS_EXEC_DEPENDS:remove = "ignition-cmake2"
+BBCLASSEXTEND = "native nativesdk"
+

@@ -2648,7 +2648,6 @@ libblas-dev:
   ubuntu: [libblas-dev]
 libblosc-dev:
   alpine: [blosc-dev]
-  arch: [blosc]
   debian: [libblosc-dev]
   fedora: [blosc-devel]
   nixos: [c-blosc]
@@ -3364,9 +3363,7 @@ libdpkg-dev:
 libdraco-dev:
   arch: [draco]
   debian: [libdraco-dev]
-  fedora:
-    '*': [draco-devel, draco-static]
-    '39': [draco-devel]
+  fedora: [draco-devel]
   nixos: [draco]
   rhel:
     '*': [draco-devel, draco-static]
@@ -3473,7 +3470,6 @@ libevent-dev:
   arch: [libevent]
   debian: [libevent-dev]
   fedora: [libevent-devel]
-  nixos: [libevent]
   opensuse: [libevent-devel]
   rhel: [libevent-devel]
   ubuntu: [libevent-dev]
@@ -4674,7 +4670,6 @@ libnss3-dev:
 liboctomap-dev:
   debian: [liboctomap-dev]
   fedora: [octomap-devel]
-  nixos: [octomap]
   rhel: [octomap-devel]
   ubuntu: [liboctomap-dev]
 libogg:
@@ -6434,7 +6429,6 @@ libvlccore-dev:
   ubuntu: [libvlccore-dev]
 libvorbis-dev:
   alpine: [libvorbis-dev]
-  arch: [libvorbis]
   debian: [libvorbis-dev]
   fedora: [libvorbis-devel]
   opensuse: [libvorbis-devel]

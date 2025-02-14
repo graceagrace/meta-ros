@@ -4912,6 +4912,11 @@ ROS_UNRESOLVED_DEP-cwiid = "ROS_UNRESOLVED_DEP-cwiid"
 ROS_UNRESOLVED_DEP-cwiid-dev = "ROS_UNRESOLVED_DEP-cwiid-dev"
 ROS_UNRESOLVED_DEP-gazebo-msgs = "ROS_UNRESOLVED_DEP-gazebo-msgs"
 ROS_UNRESOLVED_DEP-gazebo-ros = "ROS_UNRESOLVED_DEP-gazebo-ros"
+<<<<<<< HEAD
+=======
+ROS_UNRESOLVED_DEP-gazebo-ros-pkgs = "ROS_UNRESOLVED_DEP-gazebo-ros-pkgs"
+ROS_UNRESOLVED_DEP-gazebo-ros2-control = "ROS_UNRESOLVED_DEP-gazebo-ros2-control"
+>>>>>>> origin/master-next
 ROS_UNRESOLVED_DEP-gazebo-rosdev = "ROS_UNRESOLVED_DEP-gazebo-rosdev"
 ROS_UNRESOLVED_DEP-geos = "ROS_UNRESOLVED_DEP-geos"
 ROS_UNRESOLVED_DEP-glslang-dev = "ROS_UNRESOLVED_DEP-glslang-dev"

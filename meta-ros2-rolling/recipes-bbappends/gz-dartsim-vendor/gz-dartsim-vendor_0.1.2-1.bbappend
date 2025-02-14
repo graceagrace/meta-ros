@@ -3,11 +3,18 @@
 # ERROR: gz-dartsim-vendor-0.1.0-1-r0 do_package_qa: QA Issue: non -dev/-dbg/nativesdk- package gz-dartsim-vendor contains symlink .so
 inherit ros_insane_dev_so
 
+<<<<<<< HEAD
+=======
+# DART is BSD-2-Clause but the vendor package is Apache-2.0
+LICENSE = "Apache-2.0"
+
+>>>>>>> origin/master-next
 ROS_BUILD_DEPENDS = "dartsim"
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/${BPN}:"
 SRC_URI += "file://use-system-dartsim.patch"
 
+<<<<<<< HEAD
 # do_install:append:class-target () {
 #     sed -i -e "s,--sysroot=${STAGING_DIR_TARGET},,g" ${D}${ros_libdir}/pkgconfig/dart.pc
 #     sed -i -e "s,-fdebug-prefix-map=${STAGING_DIR_HOST}=,,g" ${D}${ros_libdir}/pkgconfig/dart.pc
@@ -22,4 +29,6 @@ SRC_URI += "file://use-system-dartsim.patch"
 #     sed -i -e "s, -fdebug-prefix-map=${STAGING_DIR_NATIVE}=,,g" ${D}${ros_libdir}/pkgconfig/dart.pc
 # }
 
+=======
+>>>>>>> origin/master-next
 inherit pkgconfig

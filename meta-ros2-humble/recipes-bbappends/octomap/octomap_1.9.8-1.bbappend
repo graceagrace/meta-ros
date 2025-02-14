@@ -1,8 +1,11 @@
 # Copyright (c) 2021 LG Electronics, Inc.
 # Copyright (c) 2024 Wind River Systems, Inc.
 
+LICENSE = "BSD-3-Clause"
+
 # error: 'template<class _Category, class _Tp, class _Distance, class _Pointer, class _Reference> struct std::iterator' is deprecated [-Werror=deprecated-declarations]
-CXXFLAGS += "-Wno-error=deprecated-declarations"
+# error: template-id not allowed for constructor in C++20 [-Werror=template-id-cdtor]
+CXXFLAGS += "-Wno-error=deprecated-declarations -Wno-error=template-id-cdtor"
 
 # ERROR: octomap-1.9.7-1-r0 do_package: QA Issue: octomap: Files/directories were installed but not shipped in any package:
 #   /usr/share/ament_index
@@ -21,19 +24,3 @@ FILES:${PN}:prepend = " \
 # non -dev/-dbg/nativesdk- package octomap contains symlink .so '/usr/lib/liboctomath.so'
 # non -dev/-dbg/nativesdk- package octomap contains symlink .so '/usr/lib/liboctomap.so' [dev-so]
 inherit ros_insane_dev_so
-
-# ERROR: octomap-1.9.7-1-r0 do_package_qa: QA Issue:
-# octomap: /usr/lib/liboctomath.so.1.9.7 contains probably-redundant RPATH /usr/lib
-# octomap: /usr/lib/liboctomap.so.1.9.7 contains probably-redundant RPATH /usr/lib
-# octomap: /usr/bin/log2graph contains probably-redundant RPATH /usr/lib
-# octomap: /usr/bin/compare_octrees contains probably-redundant RPATH /usr/lib
-# octomap: /usr/bin/binvox2bt contains probably-redundant RPATH /usr/lib
-# octomap: /usr/bin/bt2vrml contains probably-redundant RPATH /usr/lib
-# octomap: /usr/bin/convert_octree contains probably-redundant RPATH /usr/lib
-# octomap: /usr/bin/graph2tree contains probably-redundant RPATH /usr/lib
-# octomap: /usr/bin/edit_octree contains probably-redundant RPATH /usr/lib
-# octomap: /usr/bin/eval_octree_accuracy contains probably-redundant RPATH /usr/lib [useless-rpaths]
-DEPENDS:append:class-target = " chrpath-replacement-native"
-do_install:append() {
-    chrpath --delete ${D}${ros_bindir}/* ${D}${ros_libdir}/*${SOLIBS}
-}

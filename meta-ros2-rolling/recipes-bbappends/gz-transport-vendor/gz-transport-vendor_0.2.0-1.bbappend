@@ -1,11 +1,18 @@
 # Copyright (c) 2024 Wind River Systems, Inc.
 
+<<<<<<< HEAD
 export GZ_RELAX_VERSION_MATCH="1"
 
 inherit pkgconfig
 
 ROS_BUILD_DEPENDS += " \
     gz-transport13 \
+=======
+inherit pkgconfig
+
+ROS_BUILD_DEPENDS += " \
+    gz-transport14 \
+>>>>>>> origin/master-next
     protobuf \
 "
 

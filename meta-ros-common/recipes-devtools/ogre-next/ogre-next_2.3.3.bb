@@ -1,6 +1,6 @@
-# Copyright (c) 2023 Wind River Systems, Inc.
+# Copyright (c) 2023-2025 Wind River Systems, Inc.
 
-LICENSE = "MIT & Unknown"
+LICENSE = "MIT & BSL-1.0 & CC-BY-3.0 & LGPL-2.1-or-later"
 LIC_FILES_CHKSUM = "file://CMake/Templates/DemoLicense.rtf;md5=2711c49576d18cf781ec81aad76f40d6 \
                     file://COPYING;md5=65d1ee510d57bbd05663424f2ff8d660 \
                     file://OgreMain/src/nedmalloc/License.txt;md5=e4224ccaecb14d942c71d31bef20d78c \
@@ -49,16 +49,32 @@ DEPENDS = " \
 EXTRA_OECMAKE += " \
     -DOGRE_USE_NEW_PROJECT_NAME=ON \
     -DOGRE_FULL_RPATH:BOOL=FALSE \
-    -DOGRE_BUILD_RENDERSYSTEM_GLES2:BOOL=TRUE \
-    -DOGRE_BUILD_DOCS:BOOL=TRUE \
+    -DOGRE_BUILD_RENDERSYSTEM_GL3PLUS:BOOL=TRUE \
+    -DOGRE_BUILD_RENDERSYSTEM_GLES2:BOOL=FALSE \
+    -DOGRE_BUILD_RENDERSYSTEM_VULKAN:BOOL=TRUE \
+    -DOGRE_BUILD_COMPONENT_HLMS:BOOL=TRUE \
+    -DOGRE_BUILD_COMPONENT_PLANAR_REFLECTIONS:BOOL=TRUE \
     -DOGRE_INSTALL_DOCS:BOOL=TRUE \
-    -DOGRE_BUILD_SAMPLES:BOOL=FALSE \
+    -DOGRE_BUILD_SAMPLES2:BOOL=FALSE \
     -DOGRE_INSTALL_SAMPLES:BOOL=FALSE \
-    -DOGRE_INSTALL_SAMPLES_SOURCE:BOOL=FALSE \
+    -DOGRE_VULKAN_WINDOW_NULL:BOOL=TRUE \
+    -DOGRE_CONFIG_UNIX_NO_X11:BOOL=FALSE \
+    -DOGRE_GLSUPPORT_USE_EGL_HEADLESS:BOOL=TRUE \
+    -DOGRE_GLSUPPORT_USE_GLX:BOOL=TRUE \
 "
 
-FILES:${PN}-dev += "${libdir}/OGRE-Next/cmake ${libdir}/OGRE-Next/*${SOLIBSDEV}"
-FILES:${PN} += "${datadir}/OGRE-Next ${libdir}/OGRE-Next"
+do_configure:append() {
+    # Remove the old copy of glxext.h to use the system one that defines PFNGLXSWAPINTERVALMESAPROC
+    #    https://gitlab.freedesktop.org/mesa/mesa/-/commit/cc93f08f1e3e84f09cb2bb587d6de702dc836478
+    #
+    # These resolves a build error when using GL3Plus:
+    #   git/RenderSystems/GL3Plus/src/windowing/GLX/OgreGLXWindow.cpp:720:9: error: 'PFNGLXSWAPINTERVALMESAPROC' 
+    #       was not declared in this scope; did you mean 'PFNGLXSWAPINTERVALEXTPROC'?
+    #   git/RenderSystems/GL3Plus/src/windowing/GLX/OgreGLXWindow.cpp:721:9: error: '_glXSwapInterval
+    rm ${S}/RenderSystems/GL3Plus/include/GL/glxext.h
+}
 
+FILES:${PN}-dev += "${libdir}/OGRE-Next/cmake ${libdir}/OGRE-Next/*${SOLIBSDEV}"
+FILES:${PN} += "${datadir}/OGRE-Next ${libdir}/OGRE-Next "
 
 REQUIRED_DISTRO_FEATURES = "x11"

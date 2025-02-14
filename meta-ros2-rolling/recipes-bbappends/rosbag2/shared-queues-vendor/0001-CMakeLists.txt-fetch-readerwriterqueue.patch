@@ -40,4 +40,7 @@ Index: git/CMakeLists.txt
 +  "${PROJECT_SOURCE_DIR}/singleproducerconsumer-upstream/readerwriterqueue.h"
    DESTINATION ${CMAKE_INSTALL_PREFIX}/include/moodycamel
  )
+<<<<<<< HEAD
  
+=======
+>>>>>>> origin/master-next

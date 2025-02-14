@@ -25,6 +25,7 @@ require conf/ros-distro/include/rolling/ros-distro-preferred-providers.inc
 ROS_SUPERFLORE_GENERATED_BUILDTOOLS += " \
     action-msgs-native \
     ament-acceleration-native \
+    ament-index-cpp-native \
     ament-lint-native \
     ament-cmake-cpplint-native \
     ament-cmake-uncrustify-native \
@@ -87,6 +88,7 @@ ROS_SUPERFLORE_GENERATED_BUILDTOOLS += " \
     spdlog-vendor-native \
     std-msgs-native \
     tracetools-native \
+    type-description-interfaces-native \
     uncrustify-vendor-native \
     unique-identifier-msgs-native \
 "
@@ -141,9 +143,12 @@ ROS_WORLD_SKIP_GROUPS += "webots-python-modules"
 # recipes depending on libqglviewer (https://packages.debian.org/source/stretch/libqglviewer https://packages.debian.org/stretch/libqglviewer2-qt5)
 ROS_WORLD_SKIP_GROUPS += "libqglviewer"
 
+<<<<<<< HEAD
 # recipes depending on ignition-* (ROS_UNRESOLVED_DEP-ignition-gazebo5, ROS_UNRESOLVED_DEP-ignition-math6, ROS_UNRESOLVED_DEP-ignition-msgs7, ROS_UNRESOLVED_DEP-ignition-transport10, ROS_UNRESOLVED_DEP-ignition-rendering5, ROS_UNRESOLVED_DEP-ignition-common4, ROS_UNRESOLVED_DEP-ignition-gui5)
 # ROS_WORLD_SKIP_GROUPS += "ignition"
 
+=======
+>>>>>>> origin/master-next
 # recipes depending on legacy mongo-cxx-driver (https://packages.debian.org/source/stretch/mongo-cxx-driver-legacy)
 # the mongodb recipe in meta-oe installs just the binaries mongoc, mongos, install_compass
 # the header files searched by mongo-store, warehouse-ros-mongo cmake files cmake/FindMongoClient.cmake and cmake/FindMongoDB.cmake
@@ -420,3 +425,32 @@ ROS_UNRESOLVED_DEP-libwebsockets-dev = "libwebsockets"
 ROS_UNRESOLVED_DEP-libcurl-dev = "curl"
 ROS_UNRESOLVED_DEP-libzip-dev = "libzip"
 ROS_UNRESOLVED_DEP-ignition-math6 = "ignition-math6"
+<<<<<<< HEAD
+=======
+
+ROS_UNRESOLVED_DEP-ros-ign = "ros-gz"
+ROS_UNRESOLVED_DEP-ros-ign-gazebo = "ros-gz-sim"
+ROS_UNRESOLVED_DEP-ros-ign-gazebo-demos = "ros-gz-sim-demos"
+ROS_UNRESOLVED_DEP-ros-ign-image = "ros-gz-image"
+ROS_UNRESOLVED_DEP-ros-ign-interfaces = "ros-gz-interfaces"
+ROS_UNRESOLVED_DEP-ros-ign-bridge = "ros-gz-bridge"
+
+ROS_UNRESOLVED_DEP-python3-deprecated = "python3-deprecated"
+ROS_UNRESOLVED_DEP-coinor-libipopt-dev = "ipopt"
+
+ROS_UNRESOLVED_DEP-python3-semver = "python3-semver"
+ROS_UNRESOLVED_DEP-libusb = "libusb-compat"
+ROS_UNRESOLVED_DEP-python3-typing-extensions = "python3-typing-extensions"
+ROS_UNRESOLVED_DEP-python3-flake8-deprecated = "python3-flake8-deprecated"
+ROS_UNRESOLVED_DEP-python3-flake8-blind-except = "python3-flake8-blind-except"
+ROS_UNRESOLVED_DEP-python3-flake8-class-newline = "python3-flake8-class-newline"
+ROS_UNRESOLVED_DEP-liboctomap-dev = "octomap"
+ROS_UNRESOLVED_DEP-python3-rich = "python3-rich"
+ROS_UNRESOLVED_DEP-libserial-dev = "libserial"
+ROS_UNRESOLVED_DEP-libqt5-multimedia = "qtmultimedia"
+ROS_UNRESOLVED_DEP-libboost-timer-dev = "boost"
+ROS_UNRESOLVED_DEP-gazebo-msgs = "gazebo-msgs"
+ROS_UNRESOLVED_DEP-python3-icecream = "python3-icecream"
+ROS_UNRESOLVED_DEP-python3-waitress = "python3-waitress"
+ROS_UNRESOLVED_DEP-python3-paho-mqtt = "python3-paho-mqtt"
+>>>>>>> origin/master-next

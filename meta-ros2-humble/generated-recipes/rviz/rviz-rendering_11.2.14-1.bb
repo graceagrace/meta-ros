@@ -70,9 +70,7 @@ RDEPENDS:${PN} += "${ROS_EXEC_DEPENDS}"
 
 # matches with: https://github.com/ros2-gbp/rviz-release/archive/release/humble/rviz_rendering/11.2.14-1.tar.gz
 ROS_BRANCH ?= "branch=release/humble/rviz_rendering"
-SRC_URI = "git://github.com/ros2-gbp/rviz-release;${ROS_BRANCH};protocol=https \
-           file://0001-patch-plugin-directory-to-point-to-system-OGRE.patch \
-           "
+SRC_URI = "git://github.com/ros2-gbp/rviz-release;${ROS_BRANCH};protocol=https"
 SRCREV = "fadc4ef5f62aaf602a1f9285c6c43c9cd6d06a27"
 S = "${WORKDIR}/git"
 

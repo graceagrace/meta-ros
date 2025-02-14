@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 # Copyright (c) 2023-2024 Wind River Systems, Inc.
 
+=======
+# Copyright (c) 2023-2025 Wind River Systems, Inc.
+
+LICENSE = "BSD-3-Clause"
+
+>>>>>>> origin/master-next
 SRC_URI += "file://adding-sip5-integration.patch"
 
 inherit python3targetconfig
