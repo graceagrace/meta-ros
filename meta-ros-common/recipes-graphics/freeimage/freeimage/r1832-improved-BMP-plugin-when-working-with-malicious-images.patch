@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+Upstream-Status: Backport [https://salsa.debian.org/science-team/freeimage/-/blob/debian/sid/debian/patches/r1832-improved-BMP-plugin-when-working-with-malicious-images.patch?ref_type=heads]
+
+>>>>>>> master-next
 Origin: upstream, r1832
 Index: Source/FreeImage/PluginBMP.cpp
 ---

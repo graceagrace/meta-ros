@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+Upstream-Status: Backport [https://salsa.debian.org/science-team/freeimage/-/blob/debian/sid/debian/patches/Use-system-dependencies.patch?ref_type=heads]
+
+>>>>>>> master-next
 From: Ghislain Antony Vaillant <ghisvail@gmail.com>
 Date: Thu, 5 Nov 2015 22:47:13 +0000
 Subject: Use system dependencies.

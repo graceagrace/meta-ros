@@ -24,6 +24,7 @@ require conf/ros-distro/include/humble/ros-distro-preferred-providers.inc
 # ROS_EXEC_DEPEND are also build tools. Manually add them here.
 ROS_SUPERFLORE_GENERATED_BUILDTOOLS += " \
     ament-acceleration-native \
+    ament-index-cpp-native \
     ament-lint-native \
     cyclonedds-native \
     domain-coordinator-native \
@@ -84,6 +85,7 @@ ROS_SUPERFLORE_GENERATED_BUILDTOOLS += " \
     action-msgs-native \
     rcl-logging-spdlog-native \
     tracetools-native \
+    type-description-interfaces-native \
     libyaml-vendor-native \
     rmw-fastrtps-cpp-native \
     rmw-cyclonedds-cpp-native \
@@ -143,9 +145,6 @@ ROS_WORLD_SKIP_GROUPS += "gazebo"
 
 # recipes depending on libqglviewer (https://packages.debian.org/source/stretch/libqglviewer https://packages.debian.org/stretch/libqglviewer2-qt5)
 ROS_WORLD_SKIP_GROUPS += "libqglviewer"
-
-# recipes depending on ignition-* (ROS_UNRESOLVED_DEP-ignition-gazebo5, ROS_UNRESOLVED_DEP-ignition-math6, ROS_UNRESOLVED_DEP-ignition-msgs7, ROS_UNRESOLVED_DEP-ignition-transport10, ROS_UNRESOLVED_DEP-ignition-rendering5, ROS_UNRESOLVED_DEP-ignition-common4, ROS_UNRESOLVED_DEP-ignition-gui5)
-ROS_WORLD_SKIP_GROUPS += "ignition"
 
 # recipes depending on legacy mongo-cxx-driver (https://packages.debian.org/source/stretch/mongo-cxx-driver-legacy)
 # the mongodb recipe in meta-oe installs just the binaries mongoc, mongos, install_compass
@@ -360,3 +359,63 @@ ROS_UNRESOLVED_DEP-libserial-dev = "libserial"
 ROS_UNRESOLVED_DEP-python3-uvloop = "python3-uvloop"
 ROS_UNRESOLVED_DEP-gz-plugin = "gz-plugin"
 ROS_UNRESOLVED_DEP-libgdal-dev = "gdal"
+ROS_UNRESOLVED_DEP-glslc = "shaderc"
+ROS_UNRESOLVED_DEP-libshaderc-dev = "shaderc"
+ROS_UNRESOLVED_DEP-libgts = "gts"
+ROS_UNRESOLVED_DEP-liblz4 = "lz4"
+ROS_UNRESOLVED_DEP-liblz4-dev = "lz4"
+ROS_UNRESOLVED_DEP-qml-module-qtquick-extras = "qtdeclarative"
+ROS_UNRESOLVED_DEP-qml-module-qtcharts = "qtcharts"
+ROS_UNRESOLVED_DEP-qml-module-qtgraphicaleffects = "qtgraphicaleffects"
+ROS_UNRESOLVED_DEP-qml-module-qt-labs-folderlistmodel = "qtdeclarative"
+ROS_UNRESOLVED_DEP-qml-module-qt-labs-platform = "qtdeclarative"
+ROS_UNRESOLVED_DEP-qml-module-qt-labs-settings = "qtdeclarative"
+ROS_UNRESOLVED_DEP-qml-module-qtlocation = "qtlocation"
+ROS_UNRESOLVED_DEP-qml-module-qtpositioning = "qtlocation"
+ROS_UNRESOLVED_DEP-qml-module-qtquick2 = "qtdeclarative"
+ROS_UNRESOLVED_DEP-qml-module-qtquick-controls = "qtquickcontrols"
+ROS_UNRESOLVED_DEP-qml-module-qtquick-controls2 = "qtquickcontrols2"
+ROS_UNRESOLVED_DEP-qml-module-qtquick-dialogs = "qtdeclarative"
+ROS_UNRESOLVED_DEP-qml-module-qtquick-layouts = "qtdeclarative"
+ROS_UNRESOLVED_DEP-qml-module-qtquick-templates2 = "qtdeclarative"
+ROS_UNRESOLVED_DEP-qml-module-qtquick-window2 = "qtdeclarative"
+ROS_UNRESOLVED_DEP-ruby = "ruby"
+ROS_UNRESOLVED_DEP-zziplib = "zziplib"
+ROS_UNRESOLVED_DEP-libnlopt-dev = "nlopt"
+ROS_UNRESOLVED_DEP-libnlopt-cxx-dev = "nlopt"
+ROS_UNRESOLVED_DEP-rapidjson-dev = "rapidjson"
+ROS_UNRESOLVED_DEP-libwebsockets = "libwebsockets"
+ROS_UNRESOLVED_DEP-qtquickcontrols2-5-dev = "qtquickcontrols2"
+ROS_UNRESOLVED_DEP-qtquickcontrols2-5 = "qtquickcontrols2"
+ROS_UNRESOLVED_DEP-libfreeimage = "freeimage"
+ROS_UNRESOLVED_DEP-libfreeimage-dev = "freeimage"
+
+ROS_UNRESOLVED_DEP-libxcb-randr0-dev = "libxcb"
+ROS_UNRESOLVED_DEP-glslang-dev = "glslang"
+ROS_UNRESOLVED_DEP-libx11-xcb-dev = "libxcb"
+ROS_UNRESOLVED_DEP-libwebsockets-dev = "libwebsockets"
+ROS_UNRESOLVED_DEP-libcurl-dev = "curl"
+ROS_UNRESOLVED_DEP-libzip-dev = "libzip"
+ROS_UNRESOLVED_DEP-ignition-math6 = "ignition-math6"
+
+ROS_UNRESOLVED_DEP-ros-ign = "ros-gz"
+ROS_UNRESOLVED_DEP-ros-ign-gazebo = "ros-gz-sim"
+ROS_UNRESOLVED_DEP-ros-ign-gazebo-demos = "ros-gz-sim-demos"
+ROS_UNRESOLVED_DEP-ros-ign-image = "ros-gz-image"
+ROS_UNRESOLVED_DEP-ros-ign-interfaces = "ros-gz-interfaces"
+ROS_UNRESOLVED_DEP-ros-ign-bridge = "ros-gz-bridge"
+
+ROS_UNRESOLVED_DEP-python3-deprecated = "python3-deprecated"
+ROS_UNRESOLVED_DEP-coinor-libipopt-dev = "ipopt"
+
+ROS_UNRESOLVED_DEP-python3-semver = "python3-semver"
+ROS_UNRESOLVED_DEP-libusb = "libusb-compat"
+ROS_UNRESOLVED_DEP-liboctomap-dev = "octomap"
+ROS_UNRESOLVED_DEP-python3-rich = "python3-rich"
+ROS_UNRESOLVED_DEP-libserial-dev = "libserial"
+ROS_UNRESOLVED_DEP-libqt5-multimedia = "qtmultimedia"
+ROS_UNRESOLVED_DEP-libboost-timer-dev = "boost"
+ROS_UNRESOLVED_DEP-gazebo-msgs = "gazebo-msgs"
+ROS_UNRESOLVED_DEP-python3-icecream = "python3-icecream"
+ROS_UNRESOLVED_DEP-python3-waitress = "python3-waitress"
+ROS_UNRESOLVED_DEP-python3-paho-mqtt = "python3-paho-mqtt"

@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+Upstream-Status: Pending
+
+Signed-off-by: Rob Woolley <rob.woolley@windriver.com>
+
+>>>>>>> master-next
 Index: git/Makefile.gnu
 ===================================================================
 --- git.orig/Makefile.gnu

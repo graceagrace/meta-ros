@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+Upstream-Status: Backport [https://salsa.debian.org/science-team/freeimage/-/blob/debian/sid/debian/patches/Enable-substitution-of-pkg-config.patch?ref_type=heads]
+
+>>>>>>> master-next
 From: Helmut Grohne <helmut@subdivi.de>
 Date: Tue, 13 Dec 2016 15:59:00 +0000
 Subject: Enable substitution of pkg-config

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 From a6803dc717c40978607484e0ab4cda4a7aa2e5f7 Mon Sep 17 00:00:00 2001
+=======
+>>>>>>> master-next
 From: Chris Thrasher <chrisjthrasher@gmail.com>
 Date: Thu, 15 Feb 2024 11:40:21 -0700
 Subject: [PATCH] Disable compiler warnings by default
@@ -8,6 +11,12 @@ ideal when shipping code to be used by many third parties. In fact
 it's even better to disable warnings by default since compiler
 warnings are not hard requirements. They're merely a development
 tool that developers should opt into.
+<<<<<<< HEAD
+=======
+
+Upstream-Status: Pending
+
+>>>>>>> master-next
 ---
  CMakeLists.txt    | 3 ++-
  CMakePresets.json | 3 ++-

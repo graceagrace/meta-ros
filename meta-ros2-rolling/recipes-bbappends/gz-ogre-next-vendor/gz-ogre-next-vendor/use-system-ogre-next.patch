@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+Upstream-Status: Pending
+
+>>>>>>> master-next
 Index: git/CMakeLists.txt
 ===================================================================
 --- git.orig/CMakeLists.txt

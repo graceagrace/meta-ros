@@ -1,5 +1,10 @@
 Based on work done by Sean Yen and Jochen Sprickerhof.
 
+<<<<<<< HEAD
+=======
+Upstream-Status: Pending
+
+>>>>>>> master-next
 Signed-off-by: Rob Woolley <rob.woolley@windriver.com>
 
 https://github.com/ros-o/python_qt_binding/pull/1

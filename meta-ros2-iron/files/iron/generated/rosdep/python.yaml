@@ -6169,7 +6169,10 @@ python3-flask-restplus-pip:
 python3-flask-socketio:
   debian: [python3-flask-socketio]
   fedora: [python3-flask-socketio]
+<<<<<<< HEAD
   nixos: [python3Packages.flask-socketio]
+=======
+>>>>>>> master-next
   openembedded: [python3-flask-socketio@meta-python]
   ubuntu: [python3-flask-socketio]
 python3-flask-sqlalchemy:
@@ -7284,6 +7287,7 @@ python3-nclib-pip:
   ubuntu:
     pip:
       packages: [nclib]
+<<<<<<< HEAD
 python3-nep-pip:
   debian:
     pip:
@@ -7294,6 +7298,8 @@ python3-nep-pip:
   ubuntu:
     pip:
       packages: [nep]
+=======
+>>>>>>> master-next
 python3-nest-asyncio:
   alpine: [py3-nest_asyncio]
   arch: [python-nest-asyncio]
@@ -7574,6 +7580,7 @@ python3-openhsi-pip:
   ubuntu:
     pip:
       packages: [openhsi]
+<<<<<<< HEAD
 python3-openpyxl:
   alpine: [py3-openpyxl]
   arch: [python-openpyxl]
@@ -7583,6 +7590,8 @@ python3-openpyxl:
   opensuse: [python3-openpyxl]
   rhel: [python3-openpyxl]
   ubuntu: [python3-openpyxl]
+=======
+>>>>>>> master-next
 python3-opentelemetry-api-pip:
   '*':
     pip:
@@ -9340,7 +9349,10 @@ python3-semver:
   debian: [python3-semver]
   fedora: [python3-semver]
   freebsd: [py36-semver]
+<<<<<<< HEAD
   nixos: [python3Packages.semver]
+=======
+>>>>>>> master-next
   rhel: [python3-semver]
   ubuntu: [python3-semver]
 python3-sense-emu-pip:

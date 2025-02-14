@@ -218,8 +218,11 @@ libglew-dev:
 - glew@openembedded-core
 libglfw3-dev:
 - glfw@meta-intel-realsense
+<<<<<<< HEAD
 libglib-dev:
 - glib-2.0@openembedded-core
+=======
+>>>>>>> master-next
 libgmock-dev:
 - gtest@meta-oe
 libgoogle-glog-dev:
@@ -576,8 +579,11 @@ python3-tornado:
 - python3-tornado@meta-python
 python3-tqdm:
 - ${ROS_UNRESOLVED_DEP-python3-tqdm}
+<<<<<<< HEAD
 python3-transforms3d:
 - ${ROS_UNRESOLVED_DEP-python3-transforms3d}
+=======
+>>>>>>> master-next
 python3-twisted:
 - python3-twisted@meta-python
 python3-typeguard:

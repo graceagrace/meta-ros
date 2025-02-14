@@ -20,7 +20,7 @@ DEPENDS = " \
     ignition-common4 \
     ignition-math6 \
     ignition-msgs8 \
-    ignition-plugin \
+    ignition-plugin1 \
     ignition-rendering6 \
     ignition-tools1 \
     ignition-transport11 \

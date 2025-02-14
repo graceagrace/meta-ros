@@ -25,6 +25,7 @@ require conf/ros-distro/include/rolling/ros-distro-preferred-providers.inc
 ROS_SUPERFLORE_GENERATED_BUILDTOOLS += " \
     action-msgs-native \
     ament-acceleration-native \
+    ament-index-cpp-native \
     ament-lint-native \
     ament-cmake-cpplint-native \
     ament-cmake-uncrustify-native \
@@ -87,6 +88,7 @@ ROS_SUPERFLORE_GENERATED_BUILDTOOLS += " \
     spdlog-vendor-native \
     std-msgs-native \
     tracetools-native \
+    type-description-interfaces-native \
     uncrustify-vendor-native \
     unique-identifier-msgs-native \
 "
@@ -435,3 +437,15 @@ ROS_UNRESOLVED_DEP-python3-typing-extensions = "python3-typing-extensions"
 ROS_UNRESOLVED_DEP-python3-flake8-deprecated = "python3-flake8-deprecated"
 ROS_UNRESOLVED_DEP-python3-flake8-blind-except = "python3-flake8-blind-except"
 ROS_UNRESOLVED_DEP-python3-flake8-class-newline = "python3-flake8-class-newline"
+<<<<<<< HEAD
+=======
+ROS_UNRESOLVED_DEP-liboctomap-dev = "octomap"
+ROS_UNRESOLVED_DEP-python3-rich = "python3-rich"
+ROS_UNRESOLVED_DEP-libserial-dev = "libserial"
+ROS_UNRESOLVED_DEP-libqt5-multimedia = "qtmultimedia"
+ROS_UNRESOLVED_DEP-libboost-timer-dev = "boost"
+ROS_UNRESOLVED_DEP-gazebo-msgs = "gazebo-msgs"
+ROS_UNRESOLVED_DEP-python3-icecream = "python3-icecream"
+ROS_UNRESOLVED_DEP-python3-waitress = "python3-waitress"
+ROS_UNRESOLVED_DEP-python3-paho-mqtt = "python3-paho-mqtt"
+>>>>>>> master-next

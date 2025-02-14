@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # iron/cache.yaml 2024-10-08 a420664af65a19a51bfb18da44eefbeb1d9280ac 20241008164158 1.8.0
+=======
+# iron/cache.yaml 2024-06-14 2a94d8caad02917e02cd742f5f280f5720af47c1 20240614155019 1.8.0
+>>>>>>> master-next
 distribution_file:
 - release_platforms:
 -----
@@ -499,7 +503,11 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/apriltag_mit-release.git',
+<<<<<<< HEAD
 version: 2.0.0-1
+=======
+version: 1.2.2-1
+>>>>>>> master-next
 },
 source: {
 type: git,
@@ -828,7 +836,11 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/behaviortree_cpp_v4-release.git',
+<<<<<<< HEAD
 version: 4.6.2-1
+=======
+version: 4.6.1-1
+>>>>>>> master-next
 },
 source: {
 type: git,
@@ -852,11 +864,17 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/beluga-release.git',
+<<<<<<< HEAD
 version: 2.0.2-1
 },
 source: {
 test_commits: false,
 test_pull_requests: false,
+=======
+version: 2.0.1-1
+},
+source: {
+>>>>>>> master-next
 type: git,
 url: 'https://github.com/Ekumen-OS/beluga.git',
 version: main
@@ -1370,7 +1388,11 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/luxonis/depthai-core-release.git',
+<<<<<<< HEAD
 version: 2.28.0-1
+=======
+version: 2.26.1-1
+>>>>>>> master-next
 },
 source: {
 test_pull_requests: true,
@@ -1773,7 +1795,11 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/eigenpy-release.git',
+<<<<<<< HEAD
 version: 3.8.2-1
+=======
+version: 3.7.0-1
+>>>>>>> master-next
 },
 source: {
 type: git,
@@ -1813,7 +1839,11 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/etsi_its_messages-release.git',
+<<<<<<< HEAD
 version: 2.2.0-1
+=======
+version: 2.0.2-1
+>>>>>>> master-next
 },
 source: {
 type: git,
@@ -2023,7 +2053,11 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/fastrtps-release.git',
+<<<<<<< HEAD
 version: 2.10.5-1
+=======
+version: 2.10.4-1
+>>>>>>> master-next
 },
 source: {
 test_commits: true,
@@ -2130,7 +2164,11 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/fields2cover-release.git',
+<<<<<<< HEAD
 version: 2.0.0-12
+=======
+version: 2.0.0-11
+>>>>>>> master-next
 },
 source: {
 type: git,
@@ -2187,6 +2225,7 @@ flex_sync: {
 doc: {
 type: git,
 url: 'https://github.com/ros-misc-utilities/flex_sync.git',
+<<<<<<< HEAD
 version: release
 },
 release: {
@@ -2195,11 +2234,18 @@ release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/flex_sync-release.git',
 version: 2.0.0-1
+=======
+version: iron
+>>>>>>> master-next
 },
 source: {
 type: git,
 url: 'https://github.com/ros-misc-utilities/flex_sync.git',
+<<<<<<< HEAD
 version: release
+=======
+version: iron
+>>>>>>> master-next
 },
 status: developed
 }
@@ -2362,7 +2408,11 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/foxglove_bridge-release.git',
+<<<<<<< HEAD
 version: 0.8.0-1
+=======
+version: 0.7.7-1
+>>>>>>> master-next
 },
 source: {
 type: git,
@@ -2492,7 +2542,11 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/gazebo_ros2_control-release.git',
+<<<<<<< HEAD
 version: 0.6.8-1
+=======
+version: 0.6.6-1
+>>>>>>> master-next
 },
 source: {
 type: git,
@@ -2652,7 +2706,11 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/geometry2-release.git',
+<<<<<<< HEAD
 version: 0.31.8-1
+=======
+version: 0.31.7-1
+>>>>>>> master-next
 },
 source: {
 test_pull_requests: true,
@@ -3026,7 +3084,11 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/hpp_fcl-release.git',
+<<<<<<< HEAD
 version: 2.4.5-1
+=======
+version: 2.4.4-1
+>>>>>>> master-next
 },
 source: {
 type: git,
@@ -3257,7 +3319,11 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/imu_tools-release.git',
+<<<<<<< HEAD
 version: 2.1.5-1
+=======
+version: 2.1.4-1
+>>>>>>> master-next
 },
 source: {
 test_pull_requests: true,
@@ -4007,6 +4073,7 @@ status: maintained
 }
 -----
 lidar_situational_graphs: {
+<<<<<<< HEAD
 doc: {
 type: git,
 url: 'https://github.com/snt-arg/lidar_situational_graphs.git',
@@ -4019,6 +4086,8 @@ release: 'release/iron/{package}/{version}'
 url: 'https://github.com/ros2-gbp/lidar_situational_graphs-release.git',
 version: 0.0.1-2
 },
+=======
+>>>>>>> master-next
 source: {
 type: git,
 url: 'https://github.com/snt-arg/lidar_situational_graphs.git',
@@ -4470,7 +4539,11 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/mola-release.git',
+<<<<<<< HEAD
 version: 1.2.1-1
+=======
+version: 1.0.5-1
+>>>>>>> master-next
 },
 source: {
 type: git,
@@ -4491,7 +4564,11 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/mola_common-release.git',
+<<<<<<< HEAD
 version: 0.4.0-1
+=======
+version: 0.3.1-1
+>>>>>>> master-next
 },
 source: {
 type: git,
@@ -4533,7 +4610,11 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/mola_test_datasets-release.git',
+<<<<<<< HEAD
 version: 0.3.4-1
+=======
+version: 0.3.3-1
+>>>>>>> master-next
 },
 source: {
 type: git,
@@ -4710,7 +4791,11 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/mp2p_icp-release.git',
+<<<<<<< HEAD
 version: 1.6.2-1
+=======
+version: 1.4.3-1
+>>>>>>> master-next
 },
 source: {
 type: git,
@@ -4749,7 +4834,16 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/mrpt2-release.git',
+<<<<<<< HEAD
 version: 2.13.5-1
+=======
+version: 2.13.1-1
+},
+source: {
+type: git,
+url: 'https://github.com/MRPT/mrpt.git',
+version: develop
+>>>>>>> master-next
 },
 status: end-of-life,
 status_description: Deprecated by packages mrpt_ros and python_mrpt_ros
@@ -4791,13 +4885,20 @@ mrpt_pf_localization,
 mrpt_pointcloud_pipeline,
 mrpt_rawlog,
 mrpt_reactivenav2d,
+<<<<<<< HEAD
 mrpt_tps_astar_planner,
+=======
+>>>>>>> master-next
 mrpt_tutorials],
 tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/mrpt_navigation-release.git',
+<<<<<<< HEAD
 version: 2.2.0-1
+=======
+version: 2.0.0-1
+>>>>>>> master-next
 },
 source: {
 type: git,
@@ -4818,7 +4919,11 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/mrpt_path_planning-release.git',
+<<<<<<< HEAD
 version: 0.1.5-1
+=======
+version: 0.1.2-1
+>>>>>>> master-next
 },
 source: {
 type: git,
@@ -4872,8 +4977,12 @@ version: ros2
 release: {
 packages: [mrpt_generic_sensor,
 mrpt_sensor_bumblebee_stereo,
+<<<<<<< HEAD
 mrpt_sensor_gnss_nmea,
 mrpt_sensor_gnss_novatel,
+=======
+mrpt_sensor_gnns_nmea,
+>>>>>>> master-next
 mrpt_sensor_imu_taobotics,
 mrpt_sensorlib,
 mrpt_sensors],
@@ -4881,7 +4990,11 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/mrpt_sensors-release.git',
+<<<<<<< HEAD
 version: 0.2.3-1
+=======
+version: 0.2.0-1
+>>>>>>> master-next
 },
 source: {
 type: git,
@@ -4944,7 +5057,11 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/mvsim-release.git',
+<<<<<<< HEAD
 version: 0.10.0-1
+=======
+version: 0.9.4-1
+>>>>>>> master-next
 },
 source: {
 type: git,
@@ -5170,7 +5287,11 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/SteveMacenski/navigation2-release.git',
+<<<<<<< HEAD
 version: 1.2.10-1
+=======
+version: 1.2.9-1
+>>>>>>> master-next
 },
 source: {
 type: git,
@@ -5224,6 +5345,7 @@ version: master
 status: developed
 }
 -----
+<<<<<<< HEAD
 neo_nav2_bringup: {
 doc: {
 type: git,
@@ -5245,6 +5367,8 @@ version: iron
 status: maintained
 }
 -----
+=======
+>>>>>>> master-next
 neo_simulation2: {
 doc: {
 type: git,
@@ -5686,6 +5810,27 @@ release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/openeb_vendor-release.git',
 version: 2.0.0-1
+},
+source: {
+type: git,
+url: 'https://github.com/ros-event-camera/openeb_vendor.git',
+version: iron
+},
+status: developed
+}
+-----
+openeb_vendor: {
+doc: {
+type: git,
+url: 'https://github.com/ros-event-camera/openeb_vendor.git',
+version: iron
+},
+release: {
+tags: {
+release: 'release/iron/{package}/{version}'
+},
+url: 'https://github.com/ros2-gbp/openeb_vendor-release.git',
+version: 1.2.1-1
 },
 source: {
 type: git,
@@ -7865,7 +8010,11 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/ros2_control-release.git',
+<<<<<<< HEAD
 version: 3.28.1-1
+=======
+version: 3.25.0-1
+>>>>>>> master-next
 },
 source: {
 type: git,
@@ -7907,7 +8056,11 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/ros2_controllers-release.git',
+<<<<<<< HEAD
 version: 3.26.3-1
+=======
+version: 3.24.0-1
+>>>>>>> master-next
 },
 source: {
 type: git,
@@ -9588,7 +9741,11 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/septentrio_gnss_driver_ros2-release.git',
+<<<<<<< HEAD
 version: 1.4.1-1
+=======
+version: 1.4.0-3
+>>>>>>> master-next
 },
 source: {
 test_pull_requests: true,
@@ -9772,6 +9929,7 @@ status: maintained
 }
 -----
 situational_graphs_datasets: {
+<<<<<<< HEAD
 doc: {
 type: git,
 url: 'https://github.com/snt-arg/situational_graphs_datasets.git',
@@ -9784,6 +9942,8 @@ release: 'release/iron/{package}/{version}'
 url: 'https://github.com/ros2-gbp/situational_graphs_dataset-release.git',
 version: 0.0.0-1
 },
+=======
+>>>>>>> master-next
 source: {
 type: git,
 url: 'https://github.com/snt-arg/situational_graphs_datasets.git',
@@ -9809,6 +9969,7 @@ status: maintained
 }
 -----
 situational_graphs_reasoning: {
+<<<<<<< HEAD
 release: {
 tags: {
 release: 'release/iron/{package}/{version}'
@@ -9816,6 +9977,8 @@ release: 'release/iron/{package}/{version}'
 url: 'https://github.com/ros2-gbp/situational_graphs_reasoning-release.git',
 version: 0.0.1-1
 },
+=======
+>>>>>>> master-next
 source: {
 type: git,
 url: 'https://github.com/snt-arg/situational_graphs_reasoning.git',
@@ -9825,6 +9988,7 @@ status: maintained
 }
 -----
 situational_graphs_reasoning_msgs: {
+<<<<<<< HEAD
 release: {
 tags: {
 release: 'release/iron/{package}/{version}'
@@ -9832,6 +9996,8 @@ release: 'release/iron/{package}/{version}'
 url: 'https://github.com/ros2-gbp/situational_graphs_reasoning_msgs-release.git',
 version: 0.0.0-1
 },
+=======
+>>>>>>> master-next
 source: {
 type: git,
 url: 'https://github.com/snt-arg/situational_graphs_reasoning_msgs.git',
@@ -9841,6 +10007,7 @@ status: maintained
 }
 -----
 situational_graphs_wrapper: {
+<<<<<<< HEAD
 release: {
 tags: {
 release: 'release/iron/{package}/{version}'
@@ -9848,6 +10015,8 @@ release: 'release/iron/{package}/{version}'
 url: 'https://github.com/ros2-gbp/situational_graphs_wrapper-release.git',
 version: 0.0.0-1
 },
+=======
+>>>>>>> master-next
 source: {
 type: git,
 url: 'https://github.com/snt-arg/situational_graphs_wrapper.git',
@@ -11003,7 +11172,11 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/Universal_Robots_Client_Library-release.git',
+<<<<<<< HEAD
 version: 1.4.0-1
+=======
+version: 1.3.7-1
+>>>>>>> master-next
 },
 source: {
 type: git,
@@ -11024,7 +11197,11 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/ur_description-release.git',
+<<<<<<< HEAD
 version: 2.3.2-1
+=======
+version: 2.3.0-1
+>>>>>>> master-next
 },
 source: {
 type: git,
@@ -11072,7 +11249,11 @@ tags: {
 release: 'release/iron/{package}/{version}'
 },
 url: 'https://github.com/ros2-gbp/Universal_Robots_ROS2_Driver-release.git',
+<<<<<<< HEAD
 version: 2.3.10-1
+=======
+version: 2.3.7-1
+>>>>>>> master-next
 },
 source: {
 type: git,
@@ -18743,8 +18924,13 @@ fields2cover: <?xml version="1.0" ?>
 <depend>python3</depend>
 <depend>python3-dev</depend>
 <depend>tinyxml2</depend>
+<<<<<<< HEAD
 <depend>swig</depend>
 <depend>ortools_vendor</depend>
+=======
+<depend>protobuf-dev</depend>
+<depend>swig</depend>
+>>>>>>> master-next
 <exec_depend>python3-matplotlib</exec_depend>
 <exec_depend>python3-tk</exec_depend>
 <test_depend>gtest</test_depend>
@@ -22648,6 +22834,10 @@ kitti_metrics_eval: <?xml version="1.0" ?>
 <name>kitti_metrics_eval</name>
 <description>CLI tool to evaluate the KITTI odometry bechmark metrics to trajectory files</description>
 <maintainer email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</maintainer>
+<<<<<<< HEAD
+=======
+<url type="website">https://github.com/MOLAorg/mola/tree/develop/kitti_metrics_eval</url>
+>>>>>>> master-next
 <license file="LICENSE">BSD</license>
 <url type="website">https://github.com/MOLAorg/mola/tree/develop/kitti_metrics_eval</url>
 <depend>mola_common</depend>
@@ -25241,6 +25431,10 @@ mola_bridge_ros2: <?xml version="1.0" ?>
 <name>mola_bridge_ros2</name>
 <description>Bidirectional bridge ROS2-MOLA</description>
 <maintainer email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</maintainer>
+<<<<<<< HEAD
+=======
+<url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_bridge_ros2</url>
+>>>>>>> master-next
 <license file="LICENSE">BSD</license>
 <url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_bridge_ros2</url>
 <doc_depend>doxygen</doc_depend>
@@ -25318,6 +25512,10 @@ mola_imu_preintegration: <?xml version="1.0" ?>
 <name>mola_imu_preintegration</name>
 <description>Integrator of IMU angular velocity readings</description>
 <maintainer email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</maintainer>
+<<<<<<< HEAD
+=======
+<url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_imu_preintegration</url>
+>>>>>>> master-next
 <license file="LICENSE">GPLv3</license>
 <url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_imu_preintegration</url>
 <depend>mola_common</depend>
@@ -25335,6 +25533,10 @@ mola_input_euroc_dataset: <?xml version="1.0" ?>
 <name>mola_input_euroc_dataset</name>
 <description>Offline RawDataSource from EUROC SLAM datasets</description>
 <maintainer email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</maintainer>
+<<<<<<< HEAD
+=======
+<url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_input_euroc_dataset</url>
+>>>>>>> master-next
 <license file="LICENSE">BSD</license>
 <url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_input_euroc_dataset</url>
 <depend>mola_common</depend>
@@ -25354,6 +25556,10 @@ mola_input_kitti360_dataset: <?xml version="1.0" ?>
 <name>mola_input_kitti360_dataset</name>
 <description>Offline RawDataSource from Kitti-360 datasets</description>
 <maintainer email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</maintainer>
+<<<<<<< HEAD
+=======
+<url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_input_kitti360_dataset</url>
+>>>>>>> master-next
 <license file="LICENSE">GPLv3</license>
 <url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_input_kitti360_dataset</url>
 <depend>mola_common</depend>
@@ -25372,6 +25578,10 @@ mola_input_kitti_dataset: <?xml version="1.0" ?>
 <name>mola_input_kitti_dataset</name>
 <description>Offline RawDataSource from Kitti odometry/SLAM datasets</description>
 <maintainer email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</maintainer>
+<<<<<<< HEAD
+=======
+<url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_input_kitti_dataset</url>
+>>>>>>> master-next
 <license file="LICENSE">GPLv3</license>
 <url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_input_kitti_dataset</url>
 <depend>mola_common</depend>
@@ -25390,6 +25600,10 @@ mola_input_mulran_dataset: <?xml version="1.0" ?>
 <name>mola_input_mulran_dataset</name>
 <description>Offline RawDataSource from MulRan datasets</description>
 <maintainer email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</maintainer>
+<<<<<<< HEAD
+=======
+<url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_input_mulran_dataset</url>
+>>>>>>> master-next
 <license file="LICENSE">GPLv3</license>
 <url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_input_mulran_dataset</url>
 <depend>mola_common</depend>
@@ -25409,6 +25623,10 @@ mola_input_paris_luco_dataset: <?xml version="1.0" ?>
 <name>mola_input_paris_luco_dataset</name>
 <description>Offline RawDataSource from Paris LUCO (CT-ICP) odometry/SLAM datasets</description>
 <maintainer email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</maintainer>
+<<<<<<< HEAD
+=======
+<url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_input_paris_luco_dataset</url>
+>>>>>>> master-next
 <license file="LICENSE">GPLv3</license>
 <url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_input_paris_luco_dataset</url>
 <depend>mola_common</depend>
@@ -25427,6 +25645,10 @@ mola_input_rawlog: <?xml version="1.0" ?>
 <name>mola_input_rawlog</name>
 <description>Offline RawDataSource from MRPT rawlog datasets</description>
 <maintainer email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</maintainer>
+<<<<<<< HEAD
+=======
+<url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_input_rawlog</url>
+>>>>>>> master-next
 <license file="LICENSE">GPLv3</license>
 <url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_input_rawlog</url>
 <depend>mola_kernel</depend>
@@ -25444,6 +25666,10 @@ mola_input_rosbag2: <?xml version="1.0" ?>
 <name>mola_input_rosbag2</name>
 <description>Offline RawDataSource from rosbag2 datasets</description>
 <maintainer email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</maintainer>
+<<<<<<< HEAD
+=======
+<url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_input_rosbag2</url>
+>>>>>>> master-next
 <license file="LICENSE">GPLv3</license>
 <url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_input_rosbag2</url>
 <depend>cv_bridge</depend>
@@ -25468,6 +25694,10 @@ mola_kernel: <?xml version="1.0" ?>
 <name>mola_kernel</name>
 <description>Fundamental C++ virtual interfaces and data types for the rest of MOLA modules</description>
 <maintainer email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</maintainer>
+<<<<<<< HEAD
+=======
+<url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_kernel</url>
+>>>>>>> master-next
 <license file="LICENSE">GPLv3</license>
 <url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_kernel</url>
 <depend>mola_common</depend>
@@ -25488,6 +25718,10 @@ mola_launcher: <?xml version="1.0" ?>
 <name>mola_launcher</name>
 <description>Launcher app for MOLA systems</description>
 <maintainer email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</maintainer>
+<<<<<<< HEAD
+=======
+<url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_launcher</url>
+>>>>>>> master-next
 <license file="LICENSE">GPLv3</license>
 <url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_launcher</url>
 <depend>mola_kernel</depend>
@@ -25556,6 +25790,10 @@ mola_metric_maps: <?xml version="1.0" ?>
 using the generic `mrpt::maps::CMetricMap` interface,
 for use in other MOLA odometry and SLAM modules.</description>
 <maintainer email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</maintainer>
+<<<<<<< HEAD
+=======
+<url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_metric_maps</url>
+>>>>>>> master-next
 <license file="LICENSE">GPLv3</license>
 <url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_metric_maps</url>
 <depend>mola_common</depend>
@@ -25631,6 +25869,10 @@ mola_navstate_fuse: <?xml version="1.0" ?>
 <name>mola_navstate_fuse</name>
 <description>SE(3) pose and twist path data fusion estimator</description>
 <maintainer email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</maintainer>
+<<<<<<< HEAD
+=======
+<url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_navstate_fuse</url>
+>>>>>>> master-next
 <license file="LICENSE">GPLv3</license>
 <url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_navstate_fuse</url>
 <depend>mola_common</depend>
@@ -25650,6 +25892,10 @@ mola_pose_list: <?xml version="1.0" ?>
 <name>mola_pose_list</name>
 <description>C++ library for searchable pose lists</description>
 <maintainer email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</maintainer>
+<<<<<<< HEAD
+=======
+<url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_pose_list</url>
+>>>>>>> master-next
 <license file="LICENSE">GPLv3</license>
 <url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_pose_list</url>
 <depend>mola_common</depend>
@@ -25670,15 +25916,24 @@ mola_relocalization: <?xml version="1.0" ?>
 global localization,
 or pose estimation given a large initial uncertainty</description>
 <maintainer email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</maintainer>
+<<<<<<< HEAD
+=======
+<url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_relocalization</url>
+>>>>>>> master-next
 <license file="LICENSE">GPLv3</license>
 <url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_relocalization</url>
 <depend>mola_common</depend>
 <depend>mp2p_icp</depend>
+<<<<<<< HEAD
 <depend>mola_pose_list</depend>
 <depend>mrpt_libobs</depend>
 <depend>mrpt_libslam</depend>
 <depend>mrpt_libmaps</depend>
 <test_depend>mola_test_datasets</test_depend>
+=======
+<depend>mola_test_datasets</depend>
+<depend>mola_pose_list</depend>
+>>>>>>> master-next
 <doc_depend>doxygen</doc_depend>
 <buildtool_depend>cmake</buildtool_depend>
 <export>
@@ -25718,6 +25973,10 @@ mola_traj_tools: <?xml version="1.0" ?>
 <name>mola_traj_tools</name>
 <description>CLI tools to manipulate trajectory files as a complement to the evo package</description>
 <maintainer email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</maintainer>
+<<<<<<< HEAD
+=======
+<url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_traj_tools</url>
+>>>>>>> master-next
 <license file="LICENSE">BSD</license>
 <url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_traj_tools</url>
 <depend>mola_common</depend>
@@ -25735,6 +25994,10 @@ mola_viz: <?xml version="1.0" ?>
 <name>mola_viz</name>
 <description>GUI for MOLA</description>
 <maintainer email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</maintainer>
+<<<<<<< HEAD
+=======
+<url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_viz</url>
+>>>>>>> master-next
 <license file="LICENSE">GPLv3</license>
 <url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_viz</url>
 <depend>mola_kernel</depend>
@@ -25754,6 +26017,10 @@ mola_yaml: <?xml version="1.0" ?>
 <name>mola_yaml</name>
 <description>YAML helper library common to MOLA modules</description>
 <maintainer email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</maintainer>
+<<<<<<< HEAD
+=======
+<url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_yaml</url>
+>>>>>>> master-next
 <license file="LICENSE">BSD</license>
 <url type="website">https://github.com/MOLAorg/mola/tree/develop/mola_yaml</url>
 <depend>mola_common</depend>
@@ -27446,6 +27713,7 @@ mrpt_generic_sensor: <?xml version="1.0" ?>
 </export>
 </package>
 -----
+<<<<<<< HEAD
 mrpt_libapps: '<?xml version="1.0" ?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
@@ -28125,6 +28393,8 @@ mrpt_libtclap: '<?xml version="1.0" ?>
 </export>
 </package>'
 -----
+=======
+>>>>>>> master-next
 mrpt_map_server: <?xml version="1.0" ?>
 <package format="3">
 <name>mrpt_map_server</name>
@@ -28135,6 +28405,7 @@ not only occupancy grids.</description>
 <maintainer email="joseluisblancoc@gmail.com">Jose Luis Blanco-Claraco</maintainer>
 <maintainer email="shravansomashekara.rai@gmail.com">Shravan S Rai</maintainer>
 <license>BSD</license>
+<<<<<<< HEAD
 <url type="website">https://github.com/mrpt-ros-pkg/mrpt_navigation/tree/ros2/mrpt_map_server</url>
 <buildtool_depend>ament_cmake</buildtool_depend>
 <depend version_gte="1.6.2">mp2p_icp</depend>
@@ -28149,6 +28420,18 @@ not only occupancy grids.</description>
 <depend>tf2_geometry_msgs</depend>
 <depend>ament_cmake_lint_cmake</depend>
 <depend>ament_cmake_xmllint</depend>
+=======
+<url type="website">https://github.com/mrpt-ros-pkg/mrpt_navigation</url>
+<buildtool_depend>ament_cmake</buildtool_depend>
+<depend>mrpt2</depend>
+<depend>mp2p_icp</depend>
+<depend>rclcpp</depend>
+<depend>rclcpp_components</depend>
+<depend>nav_msgs</depend>
+<depend>mrpt_msgs</depend>
+<depend>mrpt_nav_interfaces</depend>
+<depend>ament_lint_common</depend>
+>>>>>>> master-next
 <depend>ament_lint_auto</depend>
 <export>
 <build_type>ament_cmake</build_type>
@@ -28188,7 +28471,11 @@ mrpt_msgs: <?xml version="1.0" ?>
 </package>
 -----
 mrpt_msgs_bridge: <?xml version="1.0" ?>
+<<<<<<< HEAD
 <package format="3">
+=======
+<package format="2">
+>>>>>>> master-next
 <name>mrpt_msgs_bridge</name>
 <description>C++ library to convert between custom mrpt_msgs messages and native MRPT classes</description>
 <url type="website">https://github.com/mrpt-ros-pkg/mrpt_navigation</url>
@@ -28197,6 +28484,7 @@ mrpt_msgs_bridge: <?xml version="1.0" ?>
 <author>José Luis Blanco-Claraco</author>
 <author>Shravan S Rai</author>
 <license>BSD</license>
+<<<<<<< HEAD
 <url type="website">https://github.com/mrpt-ros-pkg/mrpt_navigation</url>
 <build_depend>ros_environment</build_depend>
 <buildtool_depend>ament_cmake</buildtool_depend>
@@ -28208,6 +28496,16 @@ mrpt_msgs_bridge: <?xml version="1.0" ?>
 <depend>mrpt_msgs</depend>
 <depend>ament_cmake_lint_cmake</depend>
 <depend>ament_cmake_xmllint</depend>
+=======
+<url>https://wiki.ros.org/mrpt_msgs_bridge</url>
+<build_depend>ros_environment</build_depend>
+<buildtool_depend>ament_cmake</buildtool_depend>
+<depend>mrpt2</depend>
+<depend>geometry_msgs</depend>
+<depend>mrpt_msgs</depend>
+<depend>tf2</depend>
+<depend>ament_lint_common</depend>
+>>>>>>> master-next
 <depend>ament_lint_auto</depend>
 <export>
 <build_type>ament_cmake</build_type>
@@ -28225,11 +28523,16 @@ for other mrpt navigation packages.</description>
 <maintainer email="joseluisblancoc@gmail.com">Jose Luis Blanco-Claraco</maintainer>
 <author>Jose Luis Blanco-Claraco</author>
 <license>BSD</license>
+<<<<<<< HEAD
 <url type="website">https://github.com/mrpt-ros-pkg/mrpt_navigation</url>
 <buildtool_depend>ament_cmake</buildtool_depend>
 <buildtool_depend>rosidl_default_generators</buildtool_depend>
 <depend>action_msgs</depend>
 <depend>geometry_msgs</depend>
+=======
+<buildtool_depend>ament_cmake</buildtool_depend>
+<buildtool_depend>rosidl_default_generators</buildtool_depend>
+>>>>>>> master-next
 <depend>mrpt_msgs</depend>
 <depend>nav_msgs</depend>
 <exec_depend>rosidl_default_runtime</exec_depend>
@@ -28249,7 +28552,11 @@ mrpt_navigation: <?xml version="1.0" ?>
 <author>Jose-Luis Blanco-Claraco</author>
 <author>Markus Bader</author>
 <license>BSD</license>
+<<<<<<< HEAD
 <url type="website">https://github.com/mrpt-ros-pkg/mrpt_navigation</url>
+=======
+<url>https://wiki.ros.org/mrpt_navigation</url>
+>>>>>>> master-next
 <buildtool_depend>ament_cmake</buildtool_depend>
 <depend>mrpt_pointcloud_pipeline</depend>
 <depend>mrpt_pf_localization</depend>
@@ -28258,8 +28565,12 @@ mrpt_navigation: <?xml version="1.0" ?>
 <depend>mrpt_reactivenav2d</depend>
 <depend>mrpt_tutorials</depend>
 <depend>mrpt_nav_interfaces</depend>
+<<<<<<< HEAD
 <depend>ament_cmake_lint_cmake</depend>
 <depend>ament_cmake_xmllint</depend>
+=======
+<depend>ament_lint_common</depend>
+>>>>>>> master-next
 <depend>ament_lint_auto</depend>
 <export>
 <build_type>ament_cmake</build_type>
@@ -28296,11 +28607,16 @@ mrpt_pf_localization: <?xml version="1.0" ?>
 several grid maps at different heights,
 range-only localization,
 etc.</description>
+<<<<<<< HEAD
+=======
+<url type="website">https://github.com/mrpt-ros-pkg/mrpt_navigation</url>
+>>>>>>> master-next
 <maintainer email="markus.bader@tuwien.ac.at">Markus Bader</maintainer>
 <maintainer email="joseluisblancoc@gmail.com">Jose Luis Blanco-Claraco</maintainer>
 <author>Markus Bader</author>
 <author email="raffi.z@gmail.com">Raphael Zack</author>
 <license>BSD</license>
+<<<<<<< HEAD
 <url type="website">https://github.com/mrpt-ros-pkg/mrpt_navigation/tree/ros2/mrpt_pf_localization</url>
 <buildtool_depend>cmake</buildtool_depend>
 <buildtool_depend>ament_cmake</buildtool_depend>
@@ -28321,6 +28637,23 @@ etc.</description>
 <depend>tf2_geometry_msgs</depend>
 <depend>ament_cmake_lint_cmake</depend>
 <depend>ament_cmake_xmllint</depend>
+=======
+<url>https://wiki.ros.org/mrpt_pf_localization</url>
+<buildtool_depend>cmake</buildtool_depend>
+<buildtool_depend>ament_cmake</buildtool_depend>
+<depend>mrpt2</depend>
+<depend>tf2</depend>
+<depend>tf2_geometry_msgs</depend>
+<depend>std_msgs</depend>
+<depend>sensor_msgs</depend>
+<depend>nav_msgs</depend>
+<depend>mp2p_icp</depend>
+<depend>mola_relocalization</depend>
+<depend>mrpt_msgs</depend>
+<depend>mrpt_msgs_bridge</depend>
+<depend>pose_cov_ops</depend>
+<depend>ament_lint_common</depend>
+>>>>>>> master-next
 <depend>ament_lint_auto</depend>
 <test_depend>mrpt_tutorials</test_depend>
 <export>
@@ -28340,6 +28673,7 @@ including optional point cloud pipeline filtering or processing.</description>
 <license>BSD</license>
 <url type="website">https://github.com/mrpt-ros-pkg/mrpt_navigation</url>
 <buildtool_depend>ament_cmake</buildtool_depend>
+<<<<<<< HEAD
 <depend>mp2p_icp</depend>
 <depend>mrpt_libgui</depend>
 <depend>mrpt_libmaps</depend>
@@ -28353,6 +28687,17 @@ including optional point cloud pipeline filtering or processing.</description>
 <depend>tf2_geometry_msgs</depend>
 <depend>ament_cmake_lint_cmake</depend>
 <depend>ament_cmake_xmllint</depend>
+=======
+<depend>mrpt2</depend>
+<depend>mp2p_icp</depend>
+<depend>rclcpp</depend>
+<depend>rclcpp_components</depend>
+<depend>nav_msgs</depend>
+<depend>sensor_msgs</depend>
+<depend>tf2</depend>
+<depend>tf2_geometry_msgs</depend>
+<depend>ament_lint_common</depend>
+>>>>>>> master-next
 <depend>ament_lint_auto</depend>
 <export>
 <build_type>ament_cmake</build_type>
@@ -28367,6 +28712,7 @@ mrpt_rawlog: <?xml version="1.0" ?>
 <maintainer email="markus.bader@tuwien.ac.at">Markus Bader</maintainer>
 <maintainer email="joseluisblancoc@gmail.com">Jose Luis Blanco-Claraco</maintainer>
 <license>BSD</license>
+<<<<<<< HEAD
 <url type="website">https://github.com/mrpt-ros-pkg/mrpt_navigation</url>
 <buildtool_depend>cmake</buildtool_depend>
 <buildtool_depend>ament_cmake</buildtool_depend>
@@ -28382,6 +28728,20 @@ mrpt_rawlog: <?xml version="1.0" ?>
 <depend>tf2_ros</depend>
 <depend>ament_cmake_lint_cmake</depend>
 <depend>ament_cmake_xmllint</depend>
+=======
+<buildtool_depend>cmake</buildtool_depend>
+<buildtool_depend>ament_cmake</buildtool_depend>
+<depend>mrpt2</depend>
+<depend>tf2_ros</depend>
+<depend>rosbag2_cpp</depend>
+<depend>tf2_msgs</depend>
+<depend>nav_msgs</depend>
+<depend>sensor_msgs</depend>
+<depend>cv_bridge</depend>
+<depend>tf2_geometry_msgs</depend>
+<depend>mrpt_msgs</depend>
+<depend>ament_lint_common</depend>
+>>>>>>> master-next
 <depend>ament_lint_auto</depend>
 <export>
 <build_type>ament_cmake</build_type>
@@ -28398,6 +28758,7 @@ mrpt_reactivenav2d: <?xml version="1.0" ?>
 <license>BSD</license>
 <url type="website">https://github.com/mrpt-ros-pkg/mrpt_navigation</url>
 <buildtool_depend>ament_cmake</buildtool_depend>
+<<<<<<< HEAD
 <depend>geometry_msgs</depend>
 <depend>mrpt_libnav</depend>
 <depend>mrpt_libros_bridge</depend>
@@ -28414,6 +28775,21 @@ mrpt_reactivenav2d: <?xml version="1.0" ?>
 <depend>visualization_msgs</depend>
 <depend>ament_cmake_lint_cmake</depend>
 <depend>ament_cmake_xmllint</depend>
+=======
+<depend>mrpt2</depend>
+<depend>rclcpp</depend>
+<depend>rclcpp_components</depend>
+<depend>nav_msgs</depend>
+<depend>sensor_msgs</depend>
+<depend>geometry_msgs</depend>
+<depend>mrpt_msgs</depend>
+<depend>tf2</depend>
+<depend>tf2_ros</depend>
+<depend>tf2_geometry_msgs</depend>
+<depend>visualization_msgs</depend>
+<depend>mrpt_nav_interfaces</depend>
+<depend>ament_lint_common</depend>
+>>>>>>> master-next
 <depend>ament_lint_auto</depend>
 <export>
 <build_type>ament_cmake</build_type>
@@ -28553,6 +28929,31 @@ mrpt_sensor_imu_taobotics: <?xml version="1.0" ?>
 </export>
 </package>
 -----
+mrpt_sensor_imu_taobotics: <?xml version="1.0" ?>
+<package format="2">
+<name>mrpt_sensor_imu_taobotics</name>
+<description>ROS node for Taobotics USB IMUs (based on mrpt-hwdrivers)</description>
+<url type="website">https://github.com/mrpt-ros-pkg/mrpt_sensors</url>
+<maintainer email="joseluisblancoc@gmail.com">José Luis Blanco-Claraco</maintainer>
+<author>José Luis Blanco-Claraco</author>
+<license>BSD</license>
+<url>https://wiki.ros.org/mrpt_msgs_bridge</url>
+<build_depend>ros_environment</build_depend>
+<buildtool_depend>ament_cmake</buildtool_depend>
+<depend>rclcpp</depend>
+<depend>rclcpp_components</depend>
+<depend>tf2</depend>
+<depend>tf2_ros</depend>
+<depend>mrpt2</depend>
+<depend>mrpt_msgs</depend>
+<depend>mrpt_sensorlib</depend>
+<depend>ament_lint_common</depend>
+<depend>ament_lint_auto</depend>
+<export>
+<build_type>ament_cmake</build_type>
+</export>
+</package>
+-----
 mrpt_sensorlib: <?xml version="1.0" ?>
 <package format="3">
 <name>mrpt_sensorlib</name>
@@ -28600,7 +29001,29 @@ mrpt_sensors: <?xml version="1.0" ?>
 <depend>mrpt_sensor_gnss_nmea</depend>
 <depend>mrpt_sensor_bumblebee_stereo</depend>
 <depend>mrpt_sensor_imu_taobotics</depend>
+<<<<<<< HEAD
 <depend>mrpt_sensor_gnss_novatel</depend>
+=======
+<depend>ament_lint_common</depend>
+<depend>ament_lint_auto</depend>
+<export>
+<build_type>ament_cmake</build_type>
+</export>
+</package>
+-----
+mrpt_tutorials: <?xml version="1.0" ?>
+<package format="3">
+<name>mrpt_tutorials</name>
+<description>Example files used as tutorials for MRPT ROS packages</description>
+<maintainer email="joseluisblancoc@gmail.com">Jose Luis Blanco-Claraco</maintainer>
+<author>Markus Bader</author>
+<author>Jose Luis Blanco-Claraco</author>
+<license>BSD</license>
+<buildtool_depend>cmake</buildtool_depend>
+<buildtool_depend>ament_cmake</buildtool_depend>
+<exec_depend>teleop_twist_keyboard</exec_depend>
+<exec_depend>mvsim</exec_depend>
+>>>>>>> master-next
 <depend>ament_lint_common</depend>
 <depend>ament_lint_auto</depend>
 <export>
@@ -30138,6 +30561,7 @@ ndt_omp: <?xml version="1.0" ?>
 </export>
 </package>
 -----
+<<<<<<< HEAD
 neo_nav2_bringup: <?xml version="1.0" ?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
@@ -30154,6 +30578,8 @@ neo_nav2_bringup: <?xml version="1.0" ?>
 </export>
 </package>
 -----
+=======
+>>>>>>> master-next
 neo_simulation2: <?xml version="1.0" ?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
@@ -39343,7 +39769,11 @@ rqt_controller_manager: <?xml version="1.0" ?>
 <author email="christoph.froehlich@ait.ac.at">Christoph Froehlich</author>
 <author email="enrique.fernandez.perdomo@gmail.com">Enrique Fernandez</author>
 <author email="kphawkins@gatech.edu">Kelsey Hawkins</author>
+<<<<<<< HEAD
 <author email="mathias.luedtke@ipa.fraunhofer.de">Mathias Lüdtke</author>
+=======
+<author email="adolfo.rodriguez@pal-robotics.com">Adolfo Rodríguez Tsouroukdissian</author>
+>>>>>>> master-next
 <exec_depend>controller_manager</exec_depend>
 <exec_depend>controller_manager_msgs</exec_depend>
 <exec_depend>rclpy</exec_depend>
@@ -41525,6 +41955,7 @@ simulation: <?xml version="1.0" ?>
 </export>
 </package>
 -----
+<<<<<<< HEAD
 situational_graphs_datasets: <?xml version="1.0" ?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
@@ -41542,6 +41973,8 @@ situational_graphs_datasets: <?xml version="1.0" ?>
 </export>
 </package>
 -----
+=======
+>>>>>>> master-next
 situational_graphs_msgs: <?xml version="1.0" ?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
@@ -41565,6 +41998,7 @@ situational_graphs_msgs: <?xml version="1.0" ?>
 </export>
 </package>
 -----
+<<<<<<< HEAD
 situational_graphs_reasoning: <?xml version="1.0" ?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
@@ -41630,6 +42064,8 @@ situational_graphs_wrapper: <?xml version="1.0" ?>
 </export>
 </package>
 -----
+=======
+>>>>>>> master-next
 slam_toolbox: <?xml version="1.0" ?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
