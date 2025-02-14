@@ -32,10 +32,9 @@ FILES:${PN} += " \
 # *.cmake files have hardcoded sysroot-s in them.
 SSTATE_SCAN_FILES:append = " *.cmake"
 
-# Fix to remove TMPDIR from Export.cmake
+# Fix to remove TMPDIR
 do_install:append() {
-    recipe_sysroot="${RECIPE_SYSROOT}"
-    sed -i -e "s|${recipe_sysroot}[^;]*;||g" "${D}${libdir}/cmake/sdformat9/sdformat9-targets.cmake"
+    sed -i -e "s#${RECIPE_SYSROOT}##g" ${D}${libdir}/cmake/sdformat9/sdformat9-targets.cmake
 }
 
 BBCLASSEXTEND = "nativesdk native"
