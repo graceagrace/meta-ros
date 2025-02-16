@@ -9,3 +9,6 @@ ROS_BUILD_DEPENDS += "glew"
 # CMake Error at CMakeLists.txt:65 (qt5_wrap_cpp):
 #   Unknown CMake command "qt5_wrap_cpp".
 inherit ${@bb.utils.contains_any('ROS_WORLD_SKIP_GROUPS', ['qt5', 'pyqt5'], '', 'cmake_qt5', d)}
+
+FILESEXTRAPATHS:prepend := "${THISDIR}/${BPN}:"
+SRC_URI += "file://0001-patch-plugin-directory-to-point-to-system-OGRE.patch"
