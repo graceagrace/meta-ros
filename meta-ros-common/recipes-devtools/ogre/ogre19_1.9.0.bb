@@ -5,43 +5,41 @@ DESCRIPTION = "Extensible Modelica-based platform for optimization, simulation a
 HOMEPAGE = "https://ogrecave.github.io/"
 SECTION = "devel"
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=41bb7e40692720ea7d7b034dc4afd191"
+LIC_FILES_CHKSUM = "file://COPYING;md5=65d1ee510d57bbd05663424f2ff8d660"
 
-# matches with tag v1.12.1
-SRCREV = "8083067c1835147de5d82015347d95c710e36bc0"
+# matches with tag v1-9-0
+SRCREV = "fbe7b9edaef1e5368061fed89050092023d61d3d"
 SRC_URI = "git://github.com/OGRECave/ogre;protocol=https;branch=master \
-"
+           file://gentoo-fix-progressive-mesh-generator.patch \
+           file://add-ogre-version-to-filenames.patch"
 
 S = "${WORKDIR}/git"
 
-inherit cmake features_check pkgconfig python3native
+inherit cmake features_check pkgconfig
 
 REQUIRED_DISTRO_FEATURES = "x11"
 
 DEPENDS = " \
-    libxaw \
-    assimp \
     boost \
+    cppunit \
     freeimage \
     freetype \
-    glslang \
-    libsdl2 \
     libx11 \
-    openexr \
+    libxt \
+    libxaw \
+    ois \
     poco \
     pugixml \
-    swig-native \
-    tbb \
+    libtinyxml \
     zziplib \
     zlib \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'virtual/libgl libglu', '', d)}\
-    "
+    ${@bb.utils.contains('DISTRO_FEATURES', 'opengl', 'virtual/libgl libglu', '', d)} \
+"
 
 # extra flags from rviz-ogre-vendor ExternalProject_Add in:
 # https://github.com/ros2/rviz/blob/16ad728224246ac8361e7073e1c89baec5a0eaf1/rviz_ogre_vendor/CMakeLists.txt#L162
 EXTRA_OECMAKE_RVIZ_OGRE_VENDOR = " \
     -DOGRE_STATIC:BOOL=OFF \
-    -DOGRE_DEPENDENCIES_DIR=${CMAKE_CURRENT_BINARY_DIR}/ogredeps \
     -DOGRE_INSTALL_PDB:BOOL=OFF \
     -DOGRE_BUILD_DEPENDENCIES:BOOL=OFF \
     -DOGRE_BUILD_TESTS:BOOL=OFF \
@@ -55,10 +53,9 @@ EXTRA_OECMAKE_RVIZ_OGRE_VENDOR = " \
     -DOGRE_BUILD_COMPONENT_JAVA:BOOL=FALSE \
     -DOGRE_BUILD_COMPONENT_CSHARP:BOOL=FALSE \
     -DOGRE_BUILD_COMPONENT_BITES:BOOL=FALSE \
-    -DDOGRE_BUILD_PLUGIN_GLSLANG:BOOL=ON \
 "
 
 EXTRA_OECMAKE += "${EXTRA_OECMAKE_RVIZ_OGRE_VENDOR}"
 
-FILES:${PN}-dev += "${libdir}/OGRE/cmake ${libdir}/OGRE/*${SOLIBSDEV}"
-FILES:${PN} += "${datadir}/OGRE ${libdir}/OGRE"
+FILES:${PN}-dev += "${libdir}/OGRE19/cmake ${libdir}/OGRE19/*${SOLIBSDEV}"
+FILES:${PN} += "${datadir}/OGRE19 ${libdir}/OGRE19"
