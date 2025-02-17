@@ -5,6 +5,7 @@ is not in the find_library() search path.
 
 Therefore simply, set pykdl_FOUND if PyKDL.so exists.
 
+<<<<<<< HEAD
 Upstream-Status: Inappropriate [oe specific]
 
 Signed-off-by: Matthias Schoepfer <matthias.schoepfer@googlemail.com>
@@ -23,6 +24,29 @@ index 0f5522f..b0f085a 100644
  
  if(NOT FORCE_BUILD_VENDOR_PKG)
 -  find_package(Python3 REQUIRED COMPONENTS Interpreter)
+=======
+Signed-off-by: Matthias Schoepfer <matthias.schoepfer@googlemail.com>
+Signed-off-by: Rob Woolley <rob.woolley@windriver.com>
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index bd493da..aece216 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -14,23 +14,8 @@ if(POLICY CMP0135)
+ endif()
+
+ if(NOT FORCE_BUILD_VENDOR_PKG)
+-  # Check if Python bindings are installed by trying to import from interpreter
+-  # Figure out Python3 debug/release before anything else can find_package it
+-  if(WIN32 AND CMAKE_BUILD_TYPE STREQUAL "Debug")
+-    find_package(python_cmake_module REQUIRED)
+-    find_package(PythonExtra REQUIRED)
+-
+-    # Force FindPython3 to use the debug interpreter where ROS 2 expects it
+-    set(Python3_EXECUTABLE "${PYTHON_EXECUTABLE_DEBUG}")
+-  endif()
+-  find_package(Python3 REQUIRED COMPONENTS Interpreter Development)
+>>>>>>> feature/preserve-original-scarthgap-humble-viz-tool-fixes
 -  execute_process(
 -    COMMAND ${Python3_EXECUTABLE} -c "import PyKDL"
 -    RESULT_VARIABLE pykdl_import_exit_code

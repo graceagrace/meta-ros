@@ -6,6 +6,7 @@ the build system, not set by controller-interface.
 Upstream-Status: Inappropriate [oe specific]
 
 Signed-off-by: Rob Woolley <rob.woolley@windriver.com>
+<<<<<<< HEAD
 Signed-off-by: Stephen Street <stephen@redrocketcomputing.com>
 ---
  CMakeLists.txt | 5 -----
@@ -13,6 +14,11 @@ Signed-off-by: Stephen Street <stephen@redrocketcomputing.com>
 
 diff --git a/CMakeLists.txt b/CMakeLists.txt
 index 60b213cd5..3cb708ef9 100644
+=======
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 3dc3bc4d0..b6fc44940 100644
+>>>>>>> feature/preserve-original-scarthgap-humble-viz-tool-fixes
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -1,11 +1,6 @@
@@ -24,6 +30,12 @@ index 60b213cd5..3cb708ef9 100644
 -          -Werror=missing-braces)
 -endif()
 -
+<<<<<<< HEAD
  # using this instead of visibility macros
  # S1 from https://github.com/ros-controls/ros2_controllers/issues/1053
  set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+=======
+ set(THIS_PACKAGE_INCLUDE_DEPENDS
+   hardware_interface
+   rclcpp_lifecycle
+>>>>>>> feature/preserve-original-scarthgap-humble-viz-tool-fixes

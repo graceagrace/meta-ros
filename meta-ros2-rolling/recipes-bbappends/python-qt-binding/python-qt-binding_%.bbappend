@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 # Copyright (c) 2023-2025 Wind River Systems, Inc.
 
 LICENSE = "BSD-3-Clause"
 
+=======
+# Copyright (c) 2023-2024 Wind River Systems, Inc.
+
+>>>>>>> feature/preserve-original-scarthgap-humble-viz-tool-fixes
 SRC_URI += "file://adding-sip5-integration.patch"
 
 inherit python3targetconfig

@@ -15,3 +15,5 @@ ROS_BUILDTOOL_DEPENDS += " \
 
 BBCLASSEXTEND = "native nativesdk"
 
+# Remove ignition-cmake2 which is not needed at runtime
+ROS_EXEC_DEPENDS:remove = "ignition-cmake2"

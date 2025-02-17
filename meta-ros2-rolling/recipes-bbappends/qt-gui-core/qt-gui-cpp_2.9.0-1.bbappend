@@ -3,7 +3,11 @@
 
 LICENSE = "BSD-3-Clause"
 
+<<<<<<< HEAD
 inherit ${@bb.utils.contains('BBFILE_COLLECTIONS', 'qt5-layer', 'qmake5_base', '', d)}
+=======
+inherit ${@bb.utils.contains('BBFILE_COLLECTIONS', 'qt5-layer', 'cmake_qt5', '', d)}
+>>>>>>> feature/preserve-original-scarthgap-humble-viz-tool-fixes
 
 inherit python3native
 

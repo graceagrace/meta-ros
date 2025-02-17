@@ -2,4 +2,9 @@
 
 DEPENDS += "sdformat"
 
+<<<<<<< HEAD
+=======
+export GZ_RELAX_VERSION_MATCH="1"
+
+>>>>>>> feature/preserve-original-scarthgap-humble-viz-tool-fixes
 inherit ros_insane_dev_so

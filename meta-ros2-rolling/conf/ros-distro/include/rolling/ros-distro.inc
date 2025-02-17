@@ -138,7 +138,7 @@ ROS_WORLD_SKIP_GROUPS += "${@bb.utils.contains('DISTRO_FEATURES', 'x11', '', 'gl
 ROS_WORLD_SKIP_GROUPS += "webots-python-modules"
 
 # recipes depending on gazebo-rosdev
-ROS_WORLD_SKIP_GROUPS += "gazebo"
+# ROS_WORLD_SKIP_GROUPS += "gazebo"
 
 # recipes depending on libqglviewer (https://packages.debian.org/source/stretch/libqglviewer https://packages.debian.org/stretch/libqglviewer2-qt5)
 ROS_WORLD_SKIP_GROUPS += "libqglviewer"
@@ -343,7 +343,6 @@ ROS_UNRESOLVED_DEP-ignition-gui6-native = "ignition-gui6-native"
 
 ROS_UNRESOLVED_DEP-libqt5-qml = "qtbase"
 ROS_UNRESOLVED_DEP-libqt5-quick = "qtbase"
-ROS_UNRESOLVED_DEP-qml-module-qtquick-extras = "qtquickcontrols2"
 
 ROS_UNRESOLVED_DEP-range-v3 = "range-v3"
 ROS_UNRESOLVED_DEP-simde = "simde"

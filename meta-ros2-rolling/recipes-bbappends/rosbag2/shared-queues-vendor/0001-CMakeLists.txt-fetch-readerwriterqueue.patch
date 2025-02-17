@@ -40,3 +40,7 @@ Index: git/CMakeLists.txt
 +  "${PROJECT_SOURCE_DIR}/singleproducerconsumer-upstream/readerwriterqueue.h"
    DESTINATION ${CMAKE_INSTALL_PREFIX}/include/moodycamel
  )
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> feature/preserve-original-scarthgap-humble-viz-tool-fixes

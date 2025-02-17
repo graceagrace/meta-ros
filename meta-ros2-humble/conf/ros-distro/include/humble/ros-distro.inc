@@ -140,9 +140,6 @@ ROS_WORLD_SKIP_GROUPS += "${@bb.utils.contains('DISTRO_FEATURES', 'x11', '', 'gl
 # ERROR: Nothing RPROVIDES 'ROS_UNRESOLVED_DEP-python3-collada-pip' (but meta-ros2-rolling/generated-recipes/webots-ros2-desktop/webots-ros2-importer_0.0.3-1.bb RDEPENDS on or otherwise requires it)
 ROS_WORLD_SKIP_GROUPS += "webots-python-modules"
 
-# recipes depending on gazebo-rosdev
-ROS_WORLD_SKIP_GROUPS += "gazebo"
-
 # recipes depending on libqglviewer (https://packages.debian.org/source/stretch/libqglviewer https://packages.debian.org/stretch/libqglviewer2-qt5)
 ROS_WORLD_SKIP_GROUPS += "libqglviewer"
 

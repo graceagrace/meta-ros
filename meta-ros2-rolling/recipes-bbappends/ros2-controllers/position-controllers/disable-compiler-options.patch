@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Disable compiler options
 
 Upstream-Status: Inappropriate [oe specific]
@@ -27,3 +28,21 @@ index 71ffd0eeba..fcd3ebba23 100644
 -- 
 2.43.0
 
+=======
+Index: git/CMakeLists.txt
+===================================================================
+--- git.orig/CMakeLists.txt
++++ git/CMakeLists.txt
+@@ -1,11 +1,6 @@
+ cmake_minimum_required(VERSION 3.16)
+ project(position_controllers LANGUAGES CXX)
+ 
+-if(CMAKE_CXX_COMPILER_ID MATCHES "(GNU|Clang)")
+-  add_compile_options(-Wall -Wextra -Wpedantic -Werror=conversion -Werror=unused-but-set-variable
+-                      -Werror=return-type -Werror=shadow -Werror=format)
+-endif()
+-
+ set(THIS_PACKAGE_INCLUDE_DEPENDS
+   forward_command_controller
+   pluginlib
+>>>>>>> feature/preserve-original-scarthgap-humble-viz-tool-fixes

@@ -5,6 +5,7 @@
 COMPATIBLE_MACHINE = "(^$)"
 COMPATIBLE_MACHINE:aarch64 = "(.*)"
 COMPATIBLE_MACHINE:x86-64 = "(.*)"
+<<<<<<< HEAD
 
 LICENSE = "BSD-3-Clause"
 
@@ -21,3 +22,5 @@ do_install:append() {
 }
 
 BBCLASSEXTEND = "native"
+=======
+>>>>>>> feature/preserve-original-scarthgap-humble-viz-tool-fixes
