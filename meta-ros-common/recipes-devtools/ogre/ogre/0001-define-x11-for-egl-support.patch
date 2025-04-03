@@ -1,0 +1,78 @@
+From 7656ade56a4f871c969ee74e946b7f59d1a0ab56 Mon Sep 17 00:00:00 2001
+From: Amelia Grace <agrace@bastiansolutions.com>
+Date: Tue, 18 Feb 2025 13:10:42 -0700
+Subject: [PATCH] define-x11-for-egl-support
+
+Signed-off-by: Amelia Grace <agrace@bastiansolutions.com>
+---
+ OgreMain/include/OgreLodStrategy.h                          | 0
+ RenderSystems/GL/include/OgreGLCopyingRenderTexture.h       | 0
+ RenderSystems/GL/include/OgreGLFBOMultiRenderTarget.h       | 0
+ RenderSystems/GL/include/OgreGLFrameBufferObject.h          | 0
+ RenderSystems/GL/include/OgreGLPBRenderTexture.h            | 0
+ RenderSystems/GL/src/OgreGLCopyingRenderTexture.cpp         | 0
+ RenderSystems/GL/src/OgreGLFBOMultiRenderTarget.cpp         | 0
+ RenderSystems/GL/src/OgreGLFrameBufferObject.cpp            | 0
+ RenderSystems/GL/src/OgreGLPBRenderTexture.cpp              | 0
+ RenderSystems/GLSupport/include/EGL/X11/OgreX11EGLSupport.h | 2 ++
+ RenderSystems/GLSupport/include/OgreGLPBuffer.h             | 0
+ RenderSystems/GLSupport/src/EGL/OgreEGLSupport.cpp          | 0
+ 12 files changed, 2 insertions(+)
+ mode change 100755 => 100644 OgreMain/include/OgreLodStrategy.h
+ mode change 100755 => 100644 RenderSystems/GL/include/OgreGLCopyingRenderTexture.h
+ mode change 100755 => 100644 RenderSystems/GL/include/OgreGLFBOMultiRenderTarget.h
+ mode change 100755 => 100644 RenderSystems/GL/include/OgreGLFrameBufferObject.h
+ mode change 100755 => 100644 RenderSystems/GL/include/OgreGLPBRenderTexture.h
+ mode change 100755 => 100644 RenderSystems/GL/src/OgreGLCopyingRenderTexture.cpp
+ mode change 100755 => 100644 RenderSystems/GL/src/OgreGLFBOMultiRenderTarget.cpp
+ mode change 100755 => 100644 RenderSystems/GL/src/OgreGLFrameBufferObject.cpp
+ mode change 100755 => 100644 RenderSystems/GL/src/OgreGLPBRenderTexture.cpp
+ mode change 100755 => 100644 RenderSystems/GLSupport/include/OgreGLPBuffer.h
+ mode change 100755 => 100644 RenderSystems/GLSupport/src/EGL/OgreEGLSupport.cpp
+
+diff --git a/OgreMain/include/OgreLodStrategy.h b/OgreMain/include/OgreLodStrategy.h
+old mode 100755
+new mode 100644
+diff --git a/RenderSystems/GL/include/OgreGLCopyingRenderTexture.h b/RenderSystems/GL/include/OgreGLCopyingRenderTexture.h
+old mode 100755
+new mode 100644
+diff --git a/RenderSystems/GL/include/OgreGLFBOMultiRenderTarget.h b/RenderSystems/GL/include/OgreGLFBOMultiRenderTarget.h
+old mode 100755
+new mode 100644
+diff --git a/RenderSystems/GL/include/OgreGLFrameBufferObject.h b/RenderSystems/GL/include/OgreGLFrameBufferObject.h
+old mode 100755
+new mode 100644
+diff --git a/RenderSystems/GL/include/OgreGLPBRenderTexture.h b/RenderSystems/GL/include/OgreGLPBRenderTexture.h
+old mode 100755
+new mode 100644
+diff --git a/RenderSystems/GL/src/OgreGLCopyingRenderTexture.cpp b/RenderSystems/GL/src/OgreGLCopyingRenderTexture.cpp
+old mode 100755
+new mode 100644
+diff --git a/RenderSystems/GL/src/OgreGLFBOMultiRenderTarget.cpp b/RenderSystems/GL/src/OgreGLFBOMultiRenderTarget.cpp
+old mode 100755
+new mode 100644
+diff --git a/RenderSystems/GL/src/OgreGLFrameBufferObject.cpp b/RenderSystems/GL/src/OgreGLFrameBufferObject.cpp
+old mode 100755
+new mode 100644
+diff --git a/RenderSystems/GL/src/OgreGLPBRenderTexture.cpp b/RenderSystems/GL/src/OgreGLPBRenderTexture.cpp
+old mode 100755
+new mode 100644
+diff --git a/RenderSystems/GLSupport/include/EGL/X11/OgreX11EGLSupport.h b/RenderSystems/GLSupport/include/EGL/X11/OgreX11EGLSupport.h
+index 5540b8d59..825335ee0 100644
+--- a/RenderSystems/GLSupport/include/EGL/X11/OgreX11EGLSupport.h
++++ b/RenderSystems/GLSupport/include/EGL/X11/OgreX11EGLSupport.h
+@@ -30,6 +30,8 @@ THE SOFTWARE.
+ #ifndef __X11EGLSupport_H__
+ #define __X11EGLSupport_H__
+ 
++// Tell EGL that we are using X11 (to select the appropriate definitions)
++#define USE_X11
+ 
+ #include "OgreEGLSupport.h"
+ 
+diff --git a/RenderSystems/GLSupport/include/OgreGLPBuffer.h b/RenderSystems/GLSupport/include/OgreGLPBuffer.h
+old mode 100755
+new mode 100644
+diff --git a/RenderSystems/GLSupport/src/EGL/OgreEGLSupport.cpp b/RenderSystems/GLSupport/src/EGL/OgreEGLSupport.cpp
+old mode 100755
+new mode 100644
