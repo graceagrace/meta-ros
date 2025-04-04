@@ -12,8 +12,6 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=2a461be67a1edf991251f85f3aadd1d0 \
                     file://media/gui/fonts/BITSTREAM-LICENSE;md5=11308e907cc211412cb9543184b1e623"
 
 SRC_URI = "git://github.com/gazebosim/gazebo-classic.git;protocol=https;branch=gazebo11 \
-           file://0001-update-include-dirs-for-ogre-19.patch \
-           file://pkgconfig-use-ogre-19.patch \
            "
 
 SRCREV = "b22c6e15e52299865b31093b8feebc9ca19e26e8"
@@ -40,7 +38,7 @@ DEPENDS += " \
     libtar \
     libtinyxml2 \
     libusb1 \
-    ogre19 \
+    ogre \
     protobuf \
     protobuf-native \
     qwt-qt5 \
